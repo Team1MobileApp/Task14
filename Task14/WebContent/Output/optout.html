@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Uniform Privacy Policy for Financial Institutions implemented by FTC">
+    <meta name="author" content="FTC">
+
+    <title>Opt Out Form</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+
+    <![endif]-->
+
+</head>
+
+<body>
+<div class="container">
+<h3>[Institution]</h3> 
+<h4>Customer Privacy Preferences</h4>
+<hr>
+<div class="row">
+   <div class="col-md-6">
+<form role="form" action="MAILTO:[institutionemail@123.com]" method="post" enctype="text/plain">
+
+<label>Please enter your name or username</label><br>
+<input type="text" class="form-control" id="name" placeholder="Name or username id registered with the institution" required></p>
+<label>Please enter your email address</label><br>
+<input type="email" class="form-control" id="exampleInputEmail1" placeholder="name@email.com" required >
+</p>
+<hr>
+<table class="table table-hover table-condensed">
+<thead>
+<tr class="success">
+<th width="350px">Sharing Purpose</th>
+<th width="150px">Preference<th>
+</thead>
+<tbody>
+
+<tr>
+<td>Everyday Business Purposes</td>
+<td>
+<![if cannot opt out]-->
+<select class="form-control" disabled>
+<option></option>
+<option selected>Yes</option>
+<option>No</option>
+
+</td>
+</tr>
+
+<tr>
+<td></span>For our Marketing Purposes</td>
+<td>
+<![if can opt out]-->
+<select class="form-control" required>
+<option></option>
+<option>Yes</option>
+<option>No</option>
+</td>
+</tr>
+
+<tr>
+<td>For joint marketing with other financial companies</td>
+<td>
+<![if can opt out]-->
+<select class="form-control" required>
+<option></option>
+<option>Yes</option>
+<option>No</option>
+</td>
+</tr>
+
+<tr>
+<td></span>For our affiliates everyday business purposes - Transactions and experiences</td>
+<td>
+<![if can opt out]-->
+<select class="form-control" required>
+<option></option>
+<option>Yes</option>
+<option>No</option>
+</td>
+</tr>
+
+<tr>
+<td></span>For our affiliates everyday business purposes - Creditworthiness</td>
+<td>
+<![if can opt out]-->
+<select class="form-control" required>
+<option></option>
+<option>Yes</option>
+<option>No</option>
+</td>
+</tr>
+
+<tr>
+<td>For our affiliates to market to you</td>
+<td>
+<![if can opt out]-->
+<select class="form-control" required>
+<option></option>
+<option>Yes</option>
+<option>No</option>
+</td>
+</tr>
+
+<tr>
+<td>For Non Affiliates to market to you</td>
+<td>
+<![if institution does not share]-->
+<select class="form-control" required>
+<option></option>
+<option>Yes</option>
+<option selected>No</option>
+</td>
+</tr>
+
+<tr>
+<td>Apply changes to Joint Accounts (If applicable) </td>
+<td>
+<![if institution does not share]-->
+<select class="form-control">
+<option></option>
+<option>To everyone</option>
+<option>Only me</option>
+<option>Does not Apply</option>
+</td>
+</tr>
+
+</tbody>
+</table>
+<p align="center">
+<button type="submit" class="btn btn-success" onclick="myFunction()">Submit</button>
+
+<script>
+function myFunction() {
+    document.open();
+    document.write("<h2>Thank you.</h2><br>We have submited your preferences. You may close this window.");
+    document.close();
+}
+</script>
+</p>
+</form>      
+</div>
+    </div>
+</div>
+</body>
+</html>
