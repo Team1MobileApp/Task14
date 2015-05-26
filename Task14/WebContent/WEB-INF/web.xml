@@ -30,7 +30,7 @@
     </servlet-mapping>
 
     <welcome-file-list>
-        <welcome-file>   OutputXML.do   </welcome-file>
+        <welcome-file>   welcome.do   </welcome-file>
     </welcome-file-list>
 
     <!-- Session Configuration -->

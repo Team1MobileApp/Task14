@@ -12,8 +12,10 @@ import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 
+import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import model.Model;
@@ -32,12 +34,12 @@ import org.w3c.dom.*;
 
 import formbeans.SearchForm;
 
-public class OutputXMLAction extends Action {
+public class ChooseAction extends Action {
 	private FormBeanFactory<SearchForm> formBeanFactory = FormBeanFactory
 			.getInstance(SearchForm.class);
 
 	// constructor
-	public OutputXMLAction(Model model) {
+	public ChooseAction(Model model) {
 		
 	}
 
@@ -45,37 +47,60 @@ public class OutputXMLAction extends Action {
 
 	// get action name
 	public String getName() {
-		return "OutputXML.do";
+		return "choose.do";
 	}
 
 	// return next page name
 	public String perform(HttpServletRequest request) {
-		List<String> errors = new ArrayList<String>();
-		request.setAttribute("errors", errors);
+		if (request.getParameter("action") != null) {
+				SearchForm form;
+				try {
+					form = formBeanFactory.create(request);
+				
+				request.setAttribute("form", form);
 
-		// get session
-		HttpSession session = request.getSession();
-
-		// Set up HashSet for likes and dislikes;
-		HashSet<String> hsl = new HashSet<String>();
-		HashSet<String> hsd = new HashSet<String>();
-		session.setAttribute("hsl", hsl);
-		session.setAttribute("hsd", hsd);
-		
-		
-		ArrayList<String> info = (ArrayList<String>) session.getAttribute("info");
-			
-			String path = "/Users/Charlotte/Desktop/xml/test.xml";
-			
-			
-			
-			System.out.println("IIIIIIIIII" + info);
-			generateXMLFile(path, info);
-			
-			
+				// if no parameters passed in
+				if (!form.isPresent()) {
+					System.out.println("***********form is not present");
+					return "index.jsp";
+				}
+					
+										
+					String name = form.getName();
+					
+					String age = form.getAge();
+					String gender = form.getGender();
+					String happy = form.getHappy();
+					String location = form.getLocation();
+					String description = form.getDescription();
+					
+					ArrayList<String> info = new ArrayList<String>();
+					
+					info.add(name);
+					info.add(age);
+					info.add(gender);
+					info.add(happy);
+					info.add(location);
+					info.add(description);	
+					
+					System.out.println(info);
+					HttpSession session = request.getSession();
+					session.setAttribute("info", info);
+				} catch (FormBeanException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+            String action = request.getParameter("action");
+            if (action.equals("outputXML")) {
+            		return "OutputXML.do";
+            } else if (action.equals("outputFullPage")) {
+                 return "????";
+            } else if (action.equals("outputPlainPage")) {
+            		return "?????";
+            }
 			return "index.jsp";
-
-		
+		}
+		return "index.jsp";
 	}
 	
 	private void generateXMLFile(String path, ArrayList<String> info) {

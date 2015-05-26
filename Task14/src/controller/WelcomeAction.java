@@ -40,39 +40,32 @@ import javax.xml.transform.stream.*;
 import org.xml.sax.*;
 import org.w3c.dom.*;
 
-import databeans.Information;
 import formbeans.PathForm;
 
-public class InputXMLAction extends Action {
+public class WelcomeAction extends Action {
 	private FormBeanFactory<PathForm> formBeanFactory = FormBeanFactory
 			.getInstance(PathForm.class);
 
 	// constructor
-	public InputXMLAction(Model model) {
+	public WelcomeAction(Model model) {
 		
 	}
 
 	// get action name
 	public String getName() {
-		return "InputXML.do";
+		return "welcome.do";
 	}
 
 	// return next page name
 	public String perform(HttpServletRequest request) {
 			System.out.println("I get here!");
-			String path = "/Users/Charlotte/Desktop/xml/test7.xml";
-			
-		
-			Information info = parseXMLFile(path);
-			request.setAttribute("information", info);
+	
 			return "index.jsp";
 
 	}
 	
-	private Information parseXMLFile(String path) {
-		Information info = new Information();
+	private void parseXMLFile(String path) {
 		ArrayList<String> list = new ArrayList<String>();
-		ArrayList<String> res = new ArrayList<String>();
 		list.add("name");
 		list.add("happy");
 		list.add("age");
@@ -95,13 +88,9 @@ public class InputXMLAction extends Action {
 				Element element = (Element) nodeList.item(0);
 				nodeList = element.getChildNodes();
 				System.out.println(s  + ((Node) nodeList.item(0)).getNodeValue());
-				res.add(((Node) nodeList.item(0)).getNodeValue());
 			}
-			info = new Information(res.get(0), res.get(1), res.get(2), res.get(3), res.get(4));
-			return info;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return null;
 	}	
 }

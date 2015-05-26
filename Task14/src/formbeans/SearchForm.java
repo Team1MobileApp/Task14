@@ -7,8 +7,6 @@ import org.mybeans.form.FormBean;
 
 public class SearchForm extends FormBean{
 	
-	private String path;
-	
 	private String name;
 	private String gender;
 	private String age;
@@ -64,15 +62,6 @@ public class SearchForm extends FormBean{
 
 	public void setHappy(String happy) {
 		this.happy = happy;
-	}
-
-
-	public String getPath() {
-		return path;
-	}
-
-	public void setPath(String path) {
-		this.path = path;
 	}
 
 	@Override
