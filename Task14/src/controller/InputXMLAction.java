@@ -60,10 +60,7 @@ public class InputXMLAction extends Action {
 
 	// return next page name
 	public String perform(HttpServletRequest request, HttpServletResponse response) {
-			System.out.println("I get here!");
-			String path = "/Users/Charlotte/Desktop/xml/test7.xml";
-			
-		
+			String path = "/Users/Charlotte/Desktop/xml/test.xml";		
 			Information info = parseXMLFile(path);
 			request.setAttribute("information", info);
 			return "index.jsp";
@@ -74,11 +71,17 @@ public class InputXMLAction extends Action {
 		Information info = new Information();
 		ArrayList<String> list = new ArrayList<String>();
 		ArrayList<String> res = new ArrayList<String>();
-		list.add("name");
-		list.add("happy");
-		list.add("age");
-		list.add("gender");
-		list.add("description");
+		list.add("company");
+		list.add("entity");
+		list.add("entities");
+		list.add("joint");
+		list.add("phone");
+		list.add("email");
+		list.add("web");
+		list.add("address");
+		list.add("city");
+		list.add("zipcode");
+		list.add("state");
 		
 		try {
 			File file = new File(path);
@@ -98,7 +101,8 @@ public class InputXMLAction extends Action {
 				System.out.println(s  + ((Node) nodeList.item(0)).getNodeValue());
 				res.add(((Node) nodeList.item(0)).getNodeValue());
 			}
-			info = new Information(res.get(0), res.get(1), res.get(2), res.get(3), res.get(4));
+			info = new Information(res.get(0), res.get(1), res.get(2), res.get(3), res.get(4),
+					res.get(5), res.get(6), res.get(7), res.get(8), res.get(9), res.get(10));
 			return info;
 		} catch (Exception e) {
 			e.printStackTrace();

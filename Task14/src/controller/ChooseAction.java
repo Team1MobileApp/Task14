@@ -65,28 +65,31 @@ public class ChooseAction extends Action {
 					System.out.println("***********form is not present");
 					return "index.jsp";
 				}
+				
+				ArrayList<String> info = new ArrayList<String>();
 					
-										
-					String name = form.getName();
-					
-					String age = form.getAge();
-					String gender = form.getGender();
-					String happy = form.getHappy();
-					String location = form.getLocation();
-					String description = form.getDescription();
-					
-					ArrayList<String> info = new ArrayList<String>();
-					
-					info.add(name);
-					info.add(age);
-					info.add(gender);
-					info.add(happy);
-					info.add(location);
-					info.add(description);	
-					
-					System.out.println(info);
-					HttpSession session = request.getSession();
-					session.setAttribute("info", info);
+				info.add(form.getCompany());
+				info.add(form.getEntity());
+				info.add(form.getEntities());
+				info.add(form.getJoint());
+				info.add(form.getPhone());
+				info.add(form.getEmail());	
+				info.add(form.getWeb());
+				info.add(form.getAddress());
+				info.add(form.getCity());
+				info.add(form.getZipcode());
+				info.add(form.getState());
+				info.add(form.getWhatinfo0());
+				info.add(form.getWhatinfo1());
+				info.add(form.getWhatinfo2());
+				info.add(form.getWhatinfo3());
+				info.add(form.getWhatinfo4());
+				info.add(form.getWhatinfo5());
+				info.add(form.getWhatinfo6());	
+				System.out.println(info);
+				HttpSession session = request.getSession();
+				session.setAttribute("info", info);
+				
 				} catch (FormBeanException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -102,46 +105,5 @@ public class ChooseAction extends Action {
 			return "index.jsp";
 		}
 		return "index.jsp";
-	}
-	
-	private void generateXMLFile(String path, ArrayList<String> info) {
-	    try {
-	    		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-	        DocumentBuilder db = dbf.newDocumentBuilder();
-	        Document dom = db.newDocument();
-	        
-	        ArrayList<String> list = new ArrayList<String>();
-			list.add("name");
-			list.add("happy");
-			list.add("age");
-			list.add("gender");
-			list.add("description");
-			
-	        // create element1
-	        Element root = dom.createElement("root");
-	        dom.appendChild(root);
-	        
-	        for (int i = 0; i < list.size(); i++) {
-	        		Element element = dom.createElement(list.get(i));
-		        root.appendChild(element);	 
-		        element.appendChild(dom.createTextNode(info.get(i)));
-	        }
-	        
-	        try {
-	        	Transformer tf = TransformerFactory.newInstance().newTransformer();
-	        	tf.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
-	        	tf.setOutputProperty(OutputKeys.INDENT, "yes");
-	        Writer out = new StringWriter();
-	        tf.transform(new DOMSource(dom), new StreamResult(new FileOutputStream(path)));
-	           
-	        } catch (TransformerException te) {
-	            System.out.println(te.getMessage());
-	        } catch (FileNotFoundException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			} 
-	    } catch (ParserConfigurationException pce) {
-	        System.out.println("UsersXML: Error trying to instantiate DocumentBuilder " + pce);
-	    }
 	}
 }

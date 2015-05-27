@@ -51,32 +51,11 @@ public class OutputXMLAction extends Action {
 
 	// return next page name
 	public String perform(HttpServletRequest request, HttpServletResponse response) {
-		List<String> errors = new ArrayList<String>();
-		request.setAttribute("errors", errors);
-
-		// get session
 		HttpSession session = request.getSession();
-
-		// Set up HashSet for likes and dislikes;
-		HashSet<String> hsl = new HashSet<String>();
-		HashSet<String> hsd = new HashSet<String>();
-		session.setAttribute("hsl", hsl);
-		session.setAttribute("hsd", hsd);
-		
-		
-		ArrayList<String> info = (ArrayList<String>) session.getAttribute("info");
-			
-			String path = "/Users/Charlotte/Desktop/xml/test.xml";
-			
-			
-			
-			System.out.println("IIIIIIIIII" + info);
-			generateXMLFile(path, info);
-			
-			
-			return "index.jsp";
-
-		
+		ArrayList<String> info = (ArrayList<String>) session.getAttribute("info");		
+		String path = "/Users/Charlotte/Desktop/xml/test.xml";
+		generateXMLFile(path, info);
+		return "index.jsp";		
 	}
 	
 	private void generateXMLFile(String path, ArrayList<String> info) {
@@ -86,11 +65,24 @@ public class OutputXMLAction extends Action {
 	        Document dom = db.newDocument();
 	        
 	        ArrayList<String> list = new ArrayList<String>();
-			list.add("name");
-			list.add("happy");
-			list.add("age");
-			list.add("gender");
-			list.add("description");
+			list.add("company");
+			list.add("entity");
+			list.add("entities");
+			list.add("joint");
+			list.add("phone");
+			list.add("email");
+			list.add("web");
+			list.add("address");
+			list.add("city");
+			list.add("zipcode");
+			list.add("state");
+			list.add("whatinfo0");
+			list.add("whatinfo1");
+			list.add("whatinfo2");
+			list.add("whatinfo3");
+			list.add("whatinfo4");
+			list.add("whatinfo5");
+			list.add("whatinfo6");
 			
 	        // create element1
 	        Element root = dom.createElement("root");
@@ -99,7 +91,8 @@ public class OutputXMLAction extends Action {
 	        for (int i = 0; i < list.size(); i++) {
 	        		Element element = dom.createElement(list.get(i));
 		        root.appendChild(element);	 
-		        element.appendChild(dom.createTextNode(info.get(i)));
+		        if (info.get(i) == null)	element.appendChild(dom.createTextNode(""));
+		        else element.appendChild(dom.createTextNode(info.get(i)));
 	        }
 	        
 	        try {
