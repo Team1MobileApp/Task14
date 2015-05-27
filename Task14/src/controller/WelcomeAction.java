@@ -16,6 +16,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.xml.namespace.QName;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -57,7 +58,7 @@ public class WelcomeAction extends Action {
 	}
 
 	// return next page name
-	public String perform(HttpServletRequest request) {
+	public String perform(HttpServletRequest request, HttpServletResponse response) {
 			System.out.println("I get here!");
 	
 			return "index.jsp";

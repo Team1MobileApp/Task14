@@ -13,6 +13,7 @@ import java.util.HashSet;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.xml.parsers.DocumentBuilderFactory;
 
@@ -49,7 +50,7 @@ public class OutputXMLAction extends Action {
 	}
 
 	// return next page name
-	public String perform(HttpServletRequest request) {
+	public String perform(HttpServletRequest request, HttpServletResponse response) {
 		List<String> errors = new ArrayList<String>();
 		request.setAttribute("errors", errors);
 

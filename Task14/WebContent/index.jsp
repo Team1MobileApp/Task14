@@ -275,7 +275,7 @@ document.f1.other_field.disabled = status;
  <tr><th>Reasons to share personal information</th><th>Does your company share?</th><th>Can your customers opt out</th>
  </tr>
  </thead>
- <tbody
+ <tbody>
  <tr>
  <td>For everyday business purposes</td>
  <td><div class="form-group"><label class="radio-inline">
@@ -448,8 +448,10 @@ document.getElementById('notice').contentWindow.location.reload(true);
 }
 </script>
     <div class="col-md-12 text-center">
-      <input type="submit" onclick="myFunction()" class="btn btn-xl" value="Generate Notice">
-      </input>
+    
+      <input type="submit" onclick="myFunction()" class="btn btn-xl" value="Generate Notice"/>
+  
+      <!-- </input> -->
       <br>
       <br>
       <br>
@@ -480,7 +482,9 @@ document.getElementById('notice').contentWindow.location.reload(true);
       <h4>STANDALONE WEBPAGE</h4>
       This option downloads a Zip Folder containing a fully formatted HTML version of the Notice, including style sheets, plus the XML File. This version is the simplest way to incorporate the policy to you institution's website.<br>
       <br>
-      <button type="submit" class="btn btn-lg" name="action" value="outputFullPage">Download Full Web Page</button>
+      <form method="post" action="download.do">
+      <button type="submit" class="btn btn-lg" name="action" value="downloadFull" >Download Full Web Page</button>
+      </form>
       <br>
       <br>
     </div>
@@ -488,7 +492,9 @@ document.getElementById('notice').contentWindow.location.reload(true);
       <h4>PLAIN TEXT WEBPAGE</h4>
       This option downloads a Zip Folder containing a plain HTML version of the Notice without any formatting, plus the XML File. It is recommended if you want to embed the notice in your institution's website with your own formatting. <br>
       <br>
-      <button type="submit" class="btn btn-lg" name="action" value="outputPlainPage">Download Plain Web Page</button>
+      <form method="post" action="downloadHtml.do">
+      <button type="submit" class="btn btn-lg" name="action" value="downloadHtml">Download Plain Web Page</button>
+      </form>
       <br>
       <br>
     </div>

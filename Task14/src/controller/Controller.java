@@ -25,6 +25,8 @@ public class Controller extends HttpServlet {
         Action.add(new OutputXMLAction(model));
         Action.add(new WelcomeAction(model));
         Action.add(new ChooseAction(model));
+        Action.add(new DownloadAction(model));
+        Action.add(new DownloadPlainHtml(model));
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -32,7 +34,7 @@ public class Controller extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String nextPage = performTheAction(request);
+        String nextPage = performTheAction(request, response);
         System.out.println("nextPage: " + nextPage);
         sendToNextPage(nextPage, request, response);
     }
@@ -43,7 +45,7 @@ public class Controller extends HttpServlet {
      * @param request
      * @return the next page (the view)
      */
-    private String performTheAction(HttpServletRequest request) {
+    private String performTheAction(HttpServletRequest request, HttpServletResponse response) {
         HttpSession session     = request.getSession(true);
         String      servletPath = request.getServletPath();
         String      action = getActionName(servletPath);
@@ -53,7 +55,7 @@ public class Controller extends HttpServlet {
         // System.out.println("servletPath="+servletPath+" requestURI="+request.getRequestURI()+"  user="+user);
         
       	// Let the logged in user run his chosen action
-		return Action.perform(action,request);
+		return Action.perform(action,request, response);
     }
 
     /*

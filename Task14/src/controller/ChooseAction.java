@@ -14,6 +14,7 @@ import java.util.List;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.websocket.Session;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -51,7 +52,7 @@ public class ChooseAction extends Action {
 	}
 
 	// return next page name
-	public String perform(HttpServletRequest request) {
+	public String perform(HttpServletRequest request, HttpServletResponse response) {
 		if (request.getParameter("action") != null) {
 				SearchForm form;
 				try {
@@ -93,10 +94,10 @@ public class ChooseAction extends Action {
             String action = request.getParameter("action");
             if (action.equals("outputXML")) {
             		return "OutputXML.do";
-            } else if (action.equals("outputFullPage")) {
-                 return "????";
-            } else if (action.equals("outputPlainPage")) {
-            		return "?????";
+            } else if (action.equals("downloadFull")) {
+                 return "download.do";
+            } else if (action.equals("downloadHtml")) {
+            		return "downloadHtml.do";
             }
 			return "index.jsp";
 		}
