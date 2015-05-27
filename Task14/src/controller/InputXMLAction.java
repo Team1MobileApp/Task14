@@ -82,6 +82,13 @@ public class InputXMLAction extends Action {
 		list.add("city");
 		list.add("zipcode");
 		list.add("state");
+		list.add("whatinfo0");
+		list.add("whatinfo1");
+		list.add("whatinfo2");
+		list.add("whatinfo3");
+		list.add("whatinfo4");
+		list.add("whatinfo5");
+		list.add("whatinfo6");
 		
 		try {
 			File file = new File(path);
@@ -98,11 +105,14 @@ public class InputXMLAction extends Action {
 				nodeList = root.getElementsByTagName(s);
 				Element element = (Element) nodeList.item(0);
 				nodeList = element.getChildNodes();
-				System.out.println(s  + ((Node) nodeList.item(0)).getNodeValue());
-				res.add(((Node) nodeList.item(0)).getNodeValue());
+				if (((Node) nodeList.item(0)) == null) res.add("");
+				else res.add(((Node) nodeList.item(0)).getNodeValue());				
 			}
+			System.out.println(res);
 			info = new Information(res.get(0), res.get(1), res.get(2), res.get(3), res.get(4),
-					res.get(5), res.get(6), res.get(7), res.get(8), res.get(9), res.get(10));
+					res.get(5), res.get(6), res.get(7), res.get(8), res.get(9), res.get(10), 
+					res.get(11), res.get(12), res.get(13), res.get(14), res.get(15), res.get(16), 
+					res.get(17));
 			return info;
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -269,6 +269,7 @@ $("#limits4").click(function() {
     <div class="form-group">
       <h4>Identify the Company</h4>
       <label>Name of the company providing the notice*</label>
+      
       <input type="text" class="form-control" placeholder="e.g. American Bank" id="name" name="company" value="${information.company}" required>
       </p>
       <br>
@@ -411,31 +412,31 @@ $("#limits4").click(function() {
               </p>
               <div class="col-sm-6 col-md-4">
                 <label>
-                  <input type="checkbox" name="whatinfo0" onclick="chkcontrol(	0	)" value="	Social Security Number	" checked disabled>
+                  <input type="checkbox" name="whatinfo" onclick="chkcontrol(	0	)" value="	Social Security Number	" checked disabled>
                   Social Security Number <a title="Social Security Number is selected by default."><span class="glyphicon glyphicon-info-sign"></span></a></label>
                 <br>
                 <label>
-                  <input type="checkbox" name="whatinfo1" onclick="chkcontrol(	1	)" value="	Account balances	">
+                  <input type="checkbox" name="whatinfo" onclick="chkcontrol(	1	)" value="	Account balances	">
                   Account balances </label>
                 <br>
                 <label>
-                  <input type="checkbox" name="whatinfo2" onclick="chkcontrol(	2	)" value="	Account transactions	">
+                  <input type="checkbox" name="whatinfo" onclick="chkcontrol(	2	)" value="	Account transactions	">
                   Account transactions </label>
                 <br>
                 <label>
-                  <input type="checkbox" name="whatinfo3" onclick="chkcontrol(	3	)" value="	Assets	">
+                  <input type="checkbox" name="whatinfo" onclick="chkcontrol(	3	)" value="	Assets	">
                   Assets </label>
                 <br>
                 <label>
-                  <input type="checkbox" name="whatinfo4" onclick="chkcontrol(	4	)" value="	Checking account information	">
+                  <input type="checkbox" name="whatinfo" onclick="chkcontrol(	4	)" value="	Checking account information	">
                   Checking account information </label>
                 <br>
                 <label>
-                  <input type="checkbox" name="whatinfo5" onclick="chkcontrol(	5	)" value="	Contact Information	">
+                  <input type="checkbox" name="whatinfo" onclick="chkcontrol(	5	)" value="	Contact Information	">
                   Contact Information </label>
                 <br>
                 <label>
-                  <input type="checkbox" name="whatinfo6" onclick="chkcontrol(	6	)" value="	Credit card or other debt	">
+                  <input type="checkbox" name="whatinfo" onclick="chkcontrol(	6	)" value="	Credit card or other debt	">
                   Credit card or other debt </label>
                 <br>
                 <label>

@@ -13,15 +13,84 @@ public class Information {
 	private String address;
 	private String city;
 	private String zipcode;
-	private String state;	
+	private String state;
+	private String whatinfo0;
+	private String whatinfo1;
+	private String whatinfo2;
+	private String whatinfo3;
+	private String whatinfo4;
+	private String whatinfo5;
+	private String whatinfo6;
 	
+	public String getWhatinfo0() {
+		return whatinfo0;
+	}
+
+	public void setWhatinfo0(String whatinfo0) {
+		this.whatinfo0 = whatinfo0;
+	}
+
+	public String getWhatinfo1() {
+		return whatinfo1;
+	}
+
+	public void setWhatinfo1(String whatinfo1) {
+		this.whatinfo1 = whatinfo1;
+	}
+
+	public String getWhatinfo2() {
+		return whatinfo2;
+	}
+
+	public void setWhatinfo2(String whatinfo2) {
+		this.whatinfo2 = whatinfo2;
+	}
+
+	public String getWhatinfo3() {
+		return whatinfo3;
+	}
+
+	public void setWhatinfo3(String whatinfo3) {
+		this.whatinfo3 = whatinfo3;
+	}
+
+	public String getWhatinfo4() {
+		return whatinfo4;
+	}
+
+	public void setWhatinfo4(String whatinfo4) {
+		this.whatinfo4 = whatinfo4;
+	}
+
+	public String getWhatinfo5() {
+		return whatinfo5;
+	}
+
+	public void setWhatinfo5(String whatinfo5) {
+		this.whatinfo5 = whatinfo5;
+	}
+
+	public String getWhatinfo6() {
+		return whatinfo6;
+	}
+
+	public void setWhatinfo6(String whatinfo6) {
+		this.whatinfo6 = whatinfo6;
+	}
+
 	public Information() {
-		this("", "", "", "", "", "", "", "", "", "", "");
+		this("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "");
 	}
 	
+	
+
 	public Information(String company, String entity, String entities,
 			String joint, String phone, String email, String web,
-			String address, String city, String zipcode, String state) {
+			String address, String city, String zipcode, String state,
+			String whatinfo0, String whatinfo1, String whatinfo2,
+			String whatinfo3, String whatinfo4, String whatinfo5,
+			String whatinfo6) {
+		super();
 		this.company = company;
 		this.entity = entity;
 		this.entities = entities;
@@ -33,6 +102,13 @@ public class Information {
 		this.city = city;
 		this.zipcode = zipcode;
 		this.state = state;
+		this.whatinfo0 = whatinfo0;
+		this.whatinfo1 = whatinfo1;
+		this.whatinfo2 = whatinfo2;
+		this.whatinfo3 = whatinfo3;
+		this.whatinfo4 = whatinfo4;
+		this.whatinfo5 = whatinfo5;
+		this.whatinfo6 = whatinfo6;
 	}
 
 	public String getCompany() {
