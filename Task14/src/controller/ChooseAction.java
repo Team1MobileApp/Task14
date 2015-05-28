@@ -110,16 +110,31 @@ public class ChooseAction extends Action {
 				info.add(form.getOthers3());
 				info.add(form.getOthers7());
 				
-				info.add(form.getWhatinfo()[0]);
-				info.add(form.getWhatinfo()[1]);
-				info.add(form.getWhatinfo()[2]);
-				info.add(form.getWhatinfo()[3]);
+				if (form.getWhatinfo() == null) {
+					info.add("");
+					info.add("");
+					info.add("");
+					info.add("");
+				} else {
+					info.add(form.getWhatinfo()[0]);
+					info.add(form.getWhatinfo()[1]);
+					info.add(form.getWhatinfo()[2]);
+					info.add(form.getWhatinfo()[3]);
+				}
 				
-				info.add(form.getHow()[0]);
-				info.add(form.getHow()[1]);
-				info.add(form.getHow()[2]);
-				info.add(form.getHow()[3]);
-				info.add(form.getHow()[4]);
+				if (form.getHow() == null) {
+					info.add("");
+					info.add("");
+					info.add("");
+					info.add("");
+					info.add("");
+				} else {
+					info.add(form.getHow()[0]);
+					info.add(form.getHow()[1]);
+					info.add(form.getHow()[2]);
+					info.add(form.getHow()[3]);
+					info.add(form.getHow()[4]);
+				}
 				
 				
 				System.out.println("************" + Arrays.toString(form.getWhatinfo()));

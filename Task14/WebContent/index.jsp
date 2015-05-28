@@ -39,7 +39,42 @@
 
 
 //-->
+
 </script>
+
+<script>
+
+function download(filename, text) {
+    var pom = document.createElement('a');
+    pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    pom.setAttribute('download', filename);
+
+    if (document.createEvent) {
+        var event = document.createEvent('MouseEvents');
+        event.initEvent('click', true, true);
+        pom.dispatchEvent(event);
+    }
+    else {
+        pom.click();
+    }
+}
+			
+function downloadFile(fileName) {
+		var aLink = document.createElement('a');
+		var blob = new Blob([ '${dom}' ]);
+		var evt = document.createEvent("HTMLEvents");
+		evt.initEvent("click", false, false);
+		aLink.download = fileName;
+		aLink.href = URL.createObjectURL(blob);
+		aLink.dispatchEvent(evt);
+}
+		</script>
+
+
+
+
+
+
 <script type='text/javascript'>//<![CDATA[ 
 $(window).load(function(){
 $(function(){
@@ -313,9 +348,26 @@ $('#preview').click(function () {
 				<a class="page-scroll btn btn-xl" href="#institution">Create New 
 				CPN</a> &nbsp; &nbsp; <a class="page-scroll btn btn-xl" href="InputXML.do">
 				Import XML File</a> </div>
+				
 		</div>
 	</div>
 </header>
+<form action="InputXML.do" method="POST" enctype="multipart/form-data">
+				<table>
+					<tr>
+						<td>
+							<div style="margin: 30px">
+								<input type="file" name="file" title="Select the Backup File"
+									data-filename-placement="inside" />
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td align="center"><input type="submit" name="upload"
+							class="btn btn-primary btn-primary-lg" value="Upload" /></td>
+					</tr>
+				</table>
+			</form>
 <!-- First Section -->
 <section id="institution">
 	<div class="container">
@@ -1473,7 +1525,7 @@ Call direct line 888-123-8791" rows="2" /></textarea> </div>
 				To save your work and continue later, you can download an .XML file 
 				using the button below. You can import that file into this tool 
 				in the future to resume your work or make changes in the Notice.
-				<br><br><br><button type="submit" class="btn btn-lg" name="action" value="outputXML">Download XML File</button><br><br></div>
+				<br><br><br><button type="submit" onclick="downloadFile('dom')" class="btn btn-lg" name="action" value="outputXML">Download XML File</button><br><br></div>
 			<div class="col-md-4 text-center">
 				<h4>STANDALONE WEBPAGE</h4>
 				This option downloads a Zip Folder containing a fully formatted 

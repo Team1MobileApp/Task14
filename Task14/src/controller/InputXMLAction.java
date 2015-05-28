@@ -11,6 +11,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.text.SimpleDateFormat;
@@ -51,6 +52,29 @@ import org.w3c.dom.*;
 import databeans.Information;
 import formbeans.PathForm;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import javax.servlet.http.Part;
+
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileItemFactory;
+import org.apache.commons.fileupload.FileUploadException;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import org.apache.tomcat.util.http.fileupload.FileUpload;
+
 public class InputXMLAction extends Action {
 	private FormBeanFactory<PathForm> formBeanFactory = FormBeanFactory
 			.getInstance(PathForm.class);
@@ -67,14 +91,42 @@ public class InputXMLAction extends Action {
 
 	// return next page name
 	public String perform(HttpServletRequest request, HttpServletResponse response) {
-		String path = config.getServletContext().getRealPath("") + "/Output/XMLFile.xml";
-			Information info = parseXMLFile(path);
-			request.setAttribute("information", info);
-			return "index.jsp";
+		HttpSession session = request.getSession();
+		Information info = null;
+		if (ServletFileUpload.isMultipartContent(request)) {
+		try {
+				request.setCharacterEncoding("utf-8");
+				ServletFileUpload upload = new ServletFileUpload(new DiskFileItemFactory());
+				List<FileItem> list = (List<FileItem>) upload.parseRequest(request);
+
+				for (FileItem item : list) {
+					String name = item.getFieldName();
+					
+				
+				if (!item.isFormField()) {
+					System.out.println(name);
+					
+					InputStream in = item.getInputStream();
+				
+					info = parseXMLFile(in);
+					in.close();
+								
+					request.setAttribute("information", info);
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+}
+				
+
+			
+			
+	return "index.jsp";
 
 	}
 	
-	private Information parseXMLFile(String path) {
+	private Information parseXMLFile(InputStream in) {
 		Information info = new Information();
 		ArrayList<String> list = new ArrayList<String>();
 		ArrayList<String> res = new ArrayList<String>();
@@ -126,10 +178,10 @@ public class InputXMLAction extends Action {
 		list.add("how5");
 		
 		try {
-			File file = new File(path);
+			//File file = new File(path);
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			DocumentBuilder db = dbf.newDocumentBuilder();
-			Document doc = db.parse(file);
+			Document doc = db.parse(in);
 			doc.getDocumentElement().normalize();
 			NodeList nodeList = doc.getChildNodes();
 			Element root = (Element) nodeList.item(0);
