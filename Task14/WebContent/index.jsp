@@ -256,7 +256,7 @@ $("#limits4").click(function() {
 <div class="row">
   <div class="col-lg-12 text-center">
     <h2 class="section-heading">Your Institution</h2>
-    <h3 class="section-subheading text-muted">In this section you will provide information to identify and contact your company.</h3>
+    <h3 class="section-subheading text-muted">sIn this section you will provide information to identify and contact your company.</h3>
   </div>
 </div>
 
@@ -284,15 +284,14 @@ $("#limits4").click(function() {
    <label>Financial Institution Primary Business*</label></p>
                 <label class="radio-inline">
                 <input type="radio" name="joint" id="joint1"  value="account"
-                
-                checked
-                
+                <c:if test="${information.joint== 'account'}"> checked='checked' : '' </c:if>
+              
                 		/> Banking</label>
                 		
                 		
                 <label class="radio-inline">
                   <input type="radio" name="joint" id="joint2" value="policy"
- 
+ 					<c:if test="${information.joint== 'policy'}"> checked='checked' : '' </c:if>
                   /> Insurance</label>     
                 
                   
