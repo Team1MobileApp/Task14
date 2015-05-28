@@ -60,7 +60,7 @@ public class InputXMLAction extends Action {
 
 	// return next page name
 	public String perform(HttpServletRequest request, HttpServletResponse response) {
-			String path = "/Users/Charlotte/Desktop/xml/test.xml";		
+			String path = "WebContent/test.xml";		
 			Information info = parseXMLFile(path);
 			request.setAttribute("information", info);
 			return "index.jsp";

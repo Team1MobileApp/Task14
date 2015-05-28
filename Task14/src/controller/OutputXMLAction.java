@@ -53,7 +53,7 @@ public class OutputXMLAction extends Action {
 	public String perform(HttpServletRequest request, HttpServletResponse response) {
 		HttpSession session = request.getSession();
 		ArrayList<String> info = (ArrayList<String>) session.getAttribute("info");		
-		String path = "/Users/Charlotte/Desktop/xml/test.xml";
+		String path = "WebContent/test.xml";
 		generateXMLFile(path, info);
 		return "index.jsp";		
 	}
