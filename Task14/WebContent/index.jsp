@@ -476,57 +476,178 @@ $("#hide").click(function() {
 							<a title="Social Security Number is selected by default.">
 							<span class="glyphicon glyphicon-info-sign"></span>
 							</a></label><br><label>
-							<input name="whatinfo" onclick="chkcontrol(1)" type="checkbox" value="	Account balances	"> 
+							<input name="whatinfo" onclick="chkcontrol(1)" type="checkbox" value="	Account balances	"
+							<c:if test="${information.whatinfo1== '	Account balances	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo2== '	Account balances	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo3== '	Account balances	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo4== '	Account balances	'}"> checked='checked' : '' </c:if>
+							> 
 							Account balances </label><br><label>
-							<input name="whatinfo" onclick="chkcontrol(2)" type="checkbox" value="	Account transactions	"> 
+							<input name="whatinfo" onclick="chkcontrol(2)" type="checkbox" value="	Account transactions	"
+							<c:if test="${information.whatinfo1== '	Account transactions	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo2== '	Account transactions	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo3== '	Account transactions	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo4== '	Account transactions	'}"> checked='checked' : '' </c:if>
+							> 
 							Account transactions </label><br><label>
-							<input name="whatinfo" onclick="chkcontrol(3)" type="checkbox" value="	Assets	"> 
+							<input name="whatinfo" onclick="chkcontrol(3)" type="checkbox" value="	Assets	"
+							<c:if test="${information.whatinfo1== '	Assets	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo2== '	Assets	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo3== '	Assets	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo4== '	Assets	'}"> checked='checked' : '' </c:if>
+							> 
 							Assets </label><br><label>
-							<input name="whatinfo" onclick="chkcontrol(4)" type="checkbox" value="	Checking account information	"> 
+							<input name="whatinfo" onclick="chkcontrol(4)" type="checkbox" value="	Checking account information	"
+							<c:if test="${information.whatinfo1== '	Checking account information	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo2== '	Checking account information	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo3== '	Checking account information	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo4== '	Checking account information	'}"> checked='checked' : '' </c:if>
+							
+							> 
 							Checking account information </label><br><label>
-							<input name="whatinfo" onclick="chkcontrol(5)" type="checkbox" value="	Contact Information	"> 
+							<input name="whatinfo" onclick="chkcontrol(5)" type="checkbox" value="	Contact Information	"
+							<c:if test="${information.whatinfo1== '	Contact Information	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo2== '	Contact Information	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo3== '	Contact Information	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo4== '	Contact Information	'}"> checked='checked' : '' </c:if>
+							> 
 							Contact Information </label><br><label>
-							<input name="whatinfo" onclick="chkcontrol(6)" type="checkbox" value="	Credit card or other debt	"> 
+							<input name="whatinfo" onclick="chkcontrol(6)" type="checkbox" value="	Credit card or other debt	"
+							<c:if test="${information.whatinfo1== '	Credit card or other debt	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo2== '	Credit card or other debt	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo3== '	Credit card or other debt	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo4== '	Credit card or other debt	'}"> checked='checked' : '' </c:if>
+							> 
 							Credit card or other debt </label><br><label>
-							<input name="whatinfo" onclick="chkcontrol(7)" type="checkbox" value="	Credit history	"> 
+							<input name="whatinfo" onclick="chkcontrol(7)" type="checkbox" value="	Credit history	"
+							<c:if test="${information.whatinfo1== '	Credit history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo2== '	Credit history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo3== '	Credit history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo4== '	Credit history	'}"> checked='checked' : '' </c:if>
+							> 
 							Credit history </label><br><label>
-							<input name="whatinfo" onclick="chkcontrol(8)" type="checkbox" value="	Credit scores	"> 
+							<input name="whatinfo" onclick="chkcontrol(8)" type="checkbox" value="	Credit scores	"
+							<c:if test="${information.whatinfo1== '	Credit scores	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo2== '	Credit scores	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo3== '	Credit scores	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo4== '	Credit scores	'}"> checked='checked' : '' </c:if>
+							> 
 							Credit scores </label><br></div>
 						<div class="col-sm-6 col-md-4">
 							<label>
-							<input name="whatinfo" onclick="chkcontrol(9)" type="checkbox" value="	Employment information	"> 
+							<input name="whatinfo" onclick="chkcontrol(9)" type="checkbox" value="	Employment information	"
+							<c:if test="${information.whatinfo1== '	Employment information	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo2== '	Employment information	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo3== '	Employment information	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo4== '	Employment information	'}"> checked='checked' : '' </c:if>
+							> 
 							Employment information </label><br><label>
-							<input name="whatinfo" onclick="chkcontrol(10)" type="checkbox" value="	Income information	"> 
+							<input name="whatinfo" onclick="chkcontrol(10)" type="checkbox" value="	Income information	"
+							<c:if test="${information.whatinfo1== '	Income information	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo2== '	Income information	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo3== '	Income information	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo4== '	Income information	'}"> checked='checked' : '' </c:if>
+							> 
 							Income information </label><br><label>
-							<input name="whatinfo" onclick="chkcontrol(11)" type="checkbox" value="	Insurance claim history	"> 
+							<input name="whatinfo" onclick="chkcontrol(11)" type="checkbox" value="	Insurance claim history	"
+							<c:if test="${information.whatinfo1== '	Insurance claim history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo2== '	Insurance claim history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo3== '	Insurance claim history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo4== '	Insurance claim history	'}"> checked='checked' : '' </c:if>
+							> 
 							Insurance claim history </label><br><label>
-							<input name="whatinfo" onclick="chkcontrol(12)" type="checkbox" value="	Insurance scores	"> 
+							<input name="whatinfo" onclick="chkcontrol(12)" type="checkbox" value="	Insurance scores	"
+							<c:if test="${information.whatinfo1== '	Insurance scores	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo2== '	Insurance scores	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo3== '	Insurance scores	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo4== '	Insurance scores	'}"> checked='checked' : '' </c:if>
+							> 
 							Insurance scores </label><br><label>
-							<input name="whatinfo" onclick="chkcontrol(13)" type="checkbox" value="	Investment experiences	"> 
+							<input name="whatinfo" onclick="chkcontrol(13)" type="checkbox" value="	Investment experiences	"
+							<c:if test="${information.whatinfo1== '	Investment experiences	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo2== '	Investment experiences	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo3== '	Investment experiences	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo4== '	Investment experiences	'}"> checked='checked' : '' </c:if>
+							> 
 							Investment experiences </label><br><label>
-							<input name="whatinfo" onclick="chkcontrol(14)" type="checkbox" value="	Medical expenses	"> 
+							<input name="whatinfo" onclick="chkcontrol(14)" type="checkbox" value="	Medical expenses	"
+							<c:if test="${information.whatinfo1== '	Medical expenses	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo2== '	Medical expenses	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo3== '	Medical expenses	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo4== '	Medical expenses	'}"> checked='checked' : '' </c:if>
+							> 
 							Medical expenses </label><br><label>
-							<input name="whatinfo" onclick="chkcontrol(15)" type="checkbox" value="	Medical-related debts	"> 
+							<input name="whatinfo" onclick="chkcontrol(15)" type="checkbox" value="	Medical-related debts	"
+							<c:if test="${information.whatinfo1== '	Medical-related debts	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo2== '	Medical-related debts	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo3== '	Medical-related debts	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo4== '	Medical-related debts	'}"> checked='checked' : '' </c:if>
+							> 
 							Medical-related debts </label><br><label>
-							<input name="whatinfo" onclick="chkcontrol(16)" type="checkbox" value="	Mortgage rates and payments	"> 
+							<input name="whatinfo" onclick="chkcontrol(16)" type="checkbox" value="	Mortgage rates and payments	"
+							<c:if test="${information.whatinfo1== '	Mortgage rates and payments	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo2== '	Mortgage rates and payments	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo3== '	Mortgage rates and payments	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo4== '	Mortgage rates and payments	'}"> checked='checked' : '' </c:if>
+							> 
 							Mortgage rates and payments </label><br></div>
 						<div class="col-sm-6 col-md-4">
 							<label>
-							<input name="whatinfo" onclick="chkcontrol(17)" type="checkbox" value="	Overdue history	"> 
+							<input name="whatinfo" onclick="chkcontrol(17)" type="checkbox" value="	Overdue history	"
+							<c:if test="${information.whatinfo1== '	Overdue history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo2== '	Overdue history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo3== '	Overdue history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo4== '	Overdue history	'}"> checked='checked' : '' </c:if>
+							> 
 							Overdue history </label><br><label>
-							<input name="whatinfo" onclick="chkcontrol(18)" type="checkbox" value="	Payments history	"> 
+							<input name="whatinfo" onclick="chkcontrol(18)" type="checkbox" value="	Payments history	"
+							<c:if test="${information.whatinfo1== '	Payments history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo2== '	Payments history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo3== '	Payments history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo4== '	Payments history	'}"> checked='checked' : '' </c:if>
+							> 
 							Payments history </label><br><label>
-							<input name="whatinfo" onclick="chkcontrol(19)" type="checkbox" value="	Profit/loss history	"> 
+							<input name="whatinfo" onclick="chkcontrol(19)" type="checkbox" value="	Profit/loss history	"
+							<c:if test="${information.whatinfo1== '	Profit/loss history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo2== '	Profit/loss history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo3== '	Profit/loss history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo4== '	Profit/loss history	'}"> checked='checked' : '' </c:if>
+							> 
 							Profit/loss history </label><br><label>
-							<input name="whatinfo" onclick="chkcontrol(20)" type="checkbox" value="	Purchase history	"> 
+							<input name="whatinfo" onclick="chkcontrol(20)" type="checkbox" value="	Purchase history	"
+							<c:if test="${information.whatinfo1== '	Purchase history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo2== '	Purchase history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo3== '	Purchase history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo4== '	Purchase history	'}"> checked='checked' : '' </c:if>
+							> 
 							Purchase history </label><br><label>
-							<input name="whatinfo" onclick="chkcontrol(21)" type="checkbox" value="	Retirement assets	"> 
+							<input name="whatinfo" onclick="chkcontrol(21)" type="checkbox" value="	Retirement assets	"
+							<c:if test="${information.whatinfo1== '	Retirement assets	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo2== '	Retirement assets	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo3== '	Retirement assets	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo4== '	Retirement assets	'}"> checked='checked' : '' </c:if>
+							> 
 							Retirement assets </label><br><label>
-							<input name="whatinfo" onclick="chkcontrol(22)" type="checkbox" value="	Risk tolerance	"> 
+							<input name="whatinfo" onclick="chkcontrol(22)" type="checkbox" value="	Risk tolerance	"
+							<c:if test="${information.whatinfo1== '	Risk tolerance	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo2== '	Risk tolerance	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo3== '	Risk tolerance	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo4== '	Risk tolerance	'}"> checked='checked' : '' </c:if>
+							> 
 							Risk tolerance </label><br><label>
-							<input name="whatinfo" onclick="chkcontrol(23)" type="checkbox" value="	Transactions history	"> 
+							<input name="whatinfo" onclick="chkcontrol(23)" type="checkbox" value="	Transactions history	"
+							<c:if test="${information.whatinfo1== '	Transactions history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo2== ' 	Transactions history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo3== '	Transactions history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo4== '	Transactions history	'}"> checked='checked' : '' </c:if>
+							> 
 							Transactions history </label><br><label>
-							<input name="whatinfo" onclick="chkcontrol(24)" type="checkbox" value="	Wire transfer instructions	"> 
+							<input name="whatinfo" onclick="chkcontrol(24)" type="checkbox" value="	Wire transfer instructions	"
+							<c:if test="${information.whatinfo1== '	Wire transfer instructions	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo2== '	Wire transfer instructions	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo3== '	Wire transfer instructions	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo4== '	Wire transfer instructions	'}"> checked='checked' : '' </c:if>
+							> 
 							Wire transfer instructions </label><br></div>
 					</div>
 				</div>
@@ -566,11 +687,13 @@ $("#hide").click(function() {
 							<td>
 							<div class="form-group">
 								<label class="radio-inline">
-								<input checked name="sharing1" type="radio" value="Yes" />Yes
+								<input checked name="sharing1" type="radio" value="Yes" 
+								/>Yes
 								</label></div>
 							</td>
 							<td><label class="radio-inline">
-							<input checked name="optout1" type="radio" value="Yes" /> 
+							<input checked name="optout1" type="radio" value="Yes" 
+							/> 
 							No </label></td>
 						</tr>
 						<tr>
@@ -580,15 +703,21 @@ $("#hide").click(function() {
                   
                   <td><div class="form-group">
 								<label class="radio-inline">
-								<input id="yes" name="sharing2" type="radio" value="Yes" /> 
+								<input id="yes" name="sharing2" type="radio" value="Yes" 
+								<c:if test="${information.sharing2== 'Yes'}"> checked='checked' : '' </c:if>
+								/> 
 								Yes </label><label class="radio-inline">
-								<input id="no" name="sharing2" type="radio" value="No" /> 
+								<input id="no" name="sharing2" type="radio" value="No" 
+								<c:if test="${information.sharing2== 'No'}"> checked='checked' : '' </c:if>
+								/> 
 								No </label></div>
 							</td>
 							<td>
 							<div class="form-group">
 								<label class="radio-inline">
-								<input id="optoutyes" disabled name="optout2" type="radio" /> 
+								<input id="optoutyes" disabled name="optout2" type="radio" 
+								
+								/> 
 								Yes </label><label class="radio-inline">
 								<input id="optoutno" disabled name="optout2" type="radio" /> 
 								No</label> </div>
@@ -599,9 +728,13 @@ $("#hide").click(function() {
 							<td>
 							<div class="form-group">
 								<label class="radio-inline">
-								<input id="yes3" name="sharing3" type="radio" value="Yes" /> 
+								<input id="yes3" name="sharing3" type="radio" value="Yes" 
+								<c:if test="${information.sharing3== 'Yes'}"> checked='checked' : '' </c:if>
+								/> 
 								Yes </label><label class="radio-inline">
-								<input id="no3" name="sharing3" type="radio" value="No" /> 
+								<input id="no3" name="sharing3" type="radio" value="No" 
+								<c:if test="${information.sharing3== 'No'}"> checked='checked' : '' </c:if>
+								/> 
 								No </label></div>
 							</td>
 							<td>
@@ -619,9 +752,13 @@ $("#hide").click(function() {
 							<td>
 							<div class="form-group">
 								<label class="radio-inline">
-								<input id="yes4" name="sharing4" type="radio" value="Yes" /> 
+								<input id="yes4" name="sharing4" type="radio" value="Yes" 
+								<c:if test="${information.sharing4== 'Yes'}"> checked='checked' : '' </c:if>
+								/> 
 								Yes </label><label class="radio-inline">
-								<input id="no4" name="sharing4" type="radio" value="No" /> 
+								<input id="no4" name="sharing4" type="radio" value="No" 
+								<c:if test="${information.sharing4== 'No'}"> checked='checked' : '' </c:if>
+								/> 
 								No </label></div>
 							</td>
 							<td>
@@ -642,15 +779,21 @@ $("#hide").click(function() {
 							<td>
 							<div class="form-group">
 								<label class="radio-inline">
-								<input id="yes5" name="sharing5" type="radio" value="Yes" /> 
+								<input id="yes5" name="sharing5" type="radio" value="Yes" 
+								<c:if test="${information.sharing5== 'Yes'}"> checked='checked' : '' </c:if>
+								/> 
 								Yes </label><label class="radio-inline">
-								<input id="no5" name="sharing5" type="radio" value="No" /> 
+								<input id="no5" name="sharing5" type="radio" value="No" 
+								<c:if test="${information.sharing6== 'Yes'}"> checked='checked' : '' </c:if>
+								/> 
 								No </label></div>
 							</td>
 							<td>
 							<div class="form-group">
 								<label class="radio-inline">
-								<input id="optoutyes5" checked name="optout5" required="" type="radio" /> 
+								<input id="optoutyes5" checked name="optout5" required="" type="radio" 
+								
+								/> 
 								Yes </label></div>
 							</td>
 						</tr>
@@ -671,11 +814,17 @@ $("#hide").click(function() {
 							<td>
 							<div class="form-group">
 								<label class="radio-inline">
-								<input id="yes6" name="sharing6" type="radio" value="Yes" /> 
+								<input id="yes6" name="sharing6" type="radio" value="Yes" 
+								<c:if test="${information.sharing6== 'Yes'}"> checked='checked' : '' </c:if>
+								/> 
 								Yes </label><label class="radio-inline">
-								<input id="no6" name="sharing6" type="radio" value="No" /> 
+								<input id="no6" name="sharing6" type="radio" value="No" 
+								<c:if test="${information.sharing6== 'No'}"> checked='checked' : '' </c:if>
+								/> 
 								No </label><label class="radio-inline">
-								<input id="na6" name="sharing6" type="radio" value="NA" /> 
+								<input id="na6" name="sharing6" type="radio" value="NA" 
+								<c:if test="${information.sharing6== 'NA'}"> checked='checked' : '' </c:if>
+								/> 
 								N/A </label></div>
 							</td>
 							<td>
@@ -693,9 +842,13 @@ $("#hide").click(function() {
 							<td>
 							<div class="form-group">
 								<label class="radio-inline">
-								<input id="yes7" name="sharing7" type="radio" value="Yes" /> 
+								<input id="yes7" name="sharing7" type="radio" value="Yes" 
+								<c:if test="${information.sharing7== 'Yes'}"> checked='checked' : '' </c:if>
+								/> 
 								Yes </label><label class="radio-inline">
-								<input id="no7" name="sharing7" type="radio" value="No" /> 
+								<input id="no7" name="sharing7" type="radio" value="No" 
+								<c:if test="${information.sharing7== 'No'}"> checked='checked' : '' </c:if>
+								/> 
 								No </label></div>
 							</td>
 							<td>
@@ -714,7 +867,7 @@ $("#hide").click(function() {
 					and secured files and buildings.</font> </p>
 					<label>If you take other measures, please list them below</span></span></a></label>
 					<br>
-					<textarea id="measures" class="form-control" maxlength="200" name="measures" placeholder="Up to 30 words" rows="2" /></textarea>
+					<textarea id="measures" class="form-control" maxlength="200" name="measures" placeholder="Up to 30 words" rows="2" />${information.measures}</textarea>
 					<br>
 					<p></p>
 					<label>How does your company collect consumers' personal information? 
@@ -723,79 +876,284 @@ $("#hide").click(function() {
 					<p></p>
 					<div class="col-sm-6 col-md-4">
 						<label>
-						<input name="how" onclick="chkcontrol2(0)" type="checkbox" value="	open an account	"> 
+						<input name="how" onclick="chkcontrol2(0)" type="checkbox" value="	open an account	"
+						<c:if test="${information.how1== '	open an account	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	open an account	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	open an account	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	open an account	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	open an account	'}"> checked='checked' : '' </c:if>
+						> 
 						Open an account </label><br><label>
-						<input name="how" onclick="chkcontrol2(1)" type="checkbox" value="	deposit money	"> 
+						<input name="how" onclick="chkcontrol2(1)" type="checkbox" value="	deposit money	"
+						<c:if test="${information.how1== '	deposit money	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	deposit money	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	deposit money	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	deposit money	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	deposit money	'}"> checked='checked' : '' </c:if>
+						> 
 						Deposit money </label><br><label>
-						<input name="how" onclick="chkcontrol2(2)" type="checkbox" value="	pay your bills	"> 
+						<input name="how" onclick="chkcontrol2(2)" type="checkbox" value="	pay your bills	"
+						<c:if test="${information.how1== '	pay your bills	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	pay your bills	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	pay your bills	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	pay your bills	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	pay your bills	'}"> checked='checked' : '' </c:if>
+						> 
 						Pay your bills </label><br><label>
-						<input name="how" onclick="chkcontrol2(3)" type="checkbox" value="	apply for a loan	"> 
+						<input name="how" onclick="chkcontrol2(3)" type="checkbox" value="	apply for a loan	"
+						<c:if test="${information.how1== '	apply for a loan	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	apply for a loan	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	apply for a loan	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	apply for a loan	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	apply for a loan	'}"> checked='checked' : '' </c:if>
+						> 
 						Apply for a loan </label><br><label>
-						<input name="how" onclick="chkcontrol2(4)" type="checkbox" value="	use your credit or debit card	"> 
+						<input name="how" onclick="chkcontrol2(4)" type="checkbox" value="	use your credit or debit card	"
+						<c:if test="${information.how1== '	use your credit or debit card	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	use your credit or debit card	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	use your credit or debit card	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	use your credit or debit card	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	use your credit or debit card	'}"> checked='checked' : '' </c:if>
+						> 
 						Use your credit or debit card </label><br><label>
-						<input name="how" onclick="chkcontrol2(5)" type="checkbox" value="	seek financial or tax advice	"> 
+						<input name="how" onclick="chkcontrol2(5)" type="checkbox" value="	seek financial or tax advice	"
+						<c:if test="${information.how1== '	seek financial or tax advice	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	seek financial or tax advice	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	seek financial or tax advice	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	seek financial or tax advice	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	seek financial or tax advice	'}"> checked='checked' : '' </c:if>
+						> 
 						Seek financial or tax advice </label><br><label>
-						<input name="how" onclick="chkcontrol2(6)" type="checkbox" value="	apply for insurance	"> 
+						<input name="how" onclick="chkcontrol2(6)" type="checkbox" value="	apply for insurance	"
+						<c:if test="${information.how1== '	apply for insurance	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	apply for insurance	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	apply for insurance	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	apply for insurance	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	apply for insurance	'}"> checked='checked' : '' </c:if>
+						> 
 						Apply for insurance </label><br><label>
-						<input name="how" onclick="chkcontrol2(7)" type="checkbox" value="	pay insurance premiums	"> 
+						<input name="how" onclick="chkcontrol2(7)" type="checkbox" value="	pay insurance premiums	"
+						<c:if test="${information.how1== '	pay insurance premiums	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	pay insurance premiums	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	pay insurance premiums	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	pay insurance premiums	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	pay insurance premiums	'}"> checked='checked' : '' </c:if>
+						> 
 						Pay insurance premiums </label><br><label>
-						<input name="how" onclick="chkcontrol2(8)" type="checkbox" value="	file an insurance claim	"> 
+						<input name="how" onclick="chkcontrol2(8)" type="checkbox" value="	file an insurance claim	"
+						<c:if test="${information.how1== '	file an insurance claim	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	file an insurance claim	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	file an insurance claim	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	file an insurance claim	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	file an insurance claim	'}"> checked='checked' : '' </c:if>
+						> 
 						File an insurance claim </label><br><label>
-						<input name="how" onclick="chkcontrol2(9)" type="checkbox" value="	seek advice about your investments	"> 
+						<input name="how" onclick="chkcontrol2(9)" type="checkbox" value="	seek advice about your investments	"
+						<c:if test="${information.how1== '	seek advice about your investments	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	seek advice about your investments	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	seek advice about your investments	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	seek advice about your investments	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	seek advice about your investments	'}"> checked='checked' : '' </c:if>
+						> 
 						Seek advice about your investments </label><br><label>
-						<input name="how" onclick="chkcontrol2(10)" type="checkbox" value="	buy securities from us	"> 
+						<input name="how" onclick="chkcontrol2(10)" type="checkbox" value="	buy securities from us	"
+						<c:if test="${information.how1== '	buy securities from us	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	buy securities from us	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	buy securities from us	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	buy securities from us	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	buy securities from us	'}"> checked='checked' : '' </c:if>
+						> 
 						Buy securities from us </label><br><label>
-						<input name="how" onclick="chkcontrol2(11)" type="checkbox" value="	sell securities to us	"> 
+						<input name="how" onclick="chkcontrol2(11)" type="checkbox" value="	sell securities to us	"
+						<c:if test="${information.how1== '	sell securities to us	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	sell securities to us	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	sell securities to us	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	sell securities to us	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	sell securities to us	'}"> checked='checked' : '' </c:if>
+						> 
 						Sell securities to us </label><br><label>
-						<input name="how" onclick="chkcontrol2(12)" type="checkbox" value="	direct us to buy securities	"> 
+						<input name="how" onclick="chkcontrol2(12)" type="checkbox" value="	direct us to buy securities	"
+						<c:if test="${information.how1== '	direct us to buy securities	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	direct us to buy securities	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	direct us to buy securities	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	direct us to buy securities	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	direct us to buy securities	'}"> checked='checked' : '' </c:if>
+						> 
 						Direct us to buy securities </label><br></div>
 					<div class="col-sm-6 col-md-4">
 						<label>
-						<input name="how" onclick="chkcontrol2(13)" type="checkbox" value="	direct us to sell your securities	"> 
+						<input name="how" onclick="chkcontrol2(13)" type="checkbox" value="	direct us to sell your securities	"
+						<c:if test="${information.how1== '	direct us to sell your securities	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	direct us to sell your securities	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	direct us to sell your securities	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	direct us to sell your securities	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	direct us to sell your securities	'}"> checked='checked' : '' </c:if>
+						> 
 						Direct us to sell your securities </label><br><label>
-						<input name="how" onclick="chkcontrol2(14)" type="checkbox" value="	make deposits or withdrawals from your account	"> 
+						<input name="how" onclick="chkcontrol2(14)" type="checkbox" value="	make deposits or withdrawals from your account	"
+						<c:if test="${information.how1== '	make deposits or withdrawals from your account	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	make deposits or withdrawals from your account	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	make deposits or withdrawals from your account	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	make deposits or withdrawals from your account	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	make deposits or withdrawals from your account	'}"> checked='checked' : '' </c:if>
+						> 
 						Make deposits or withdrawals </label><br><label>
-						<input name="how" onclick="chkcontrol2(15)" type="checkbox" value="	enter into an investment advisory contract	"> 
+						<input name="how" onclick="chkcontrol2(15)" type="checkbox" value="	enter into an investment advisory contract	"
+						<c:if test="${information.how1== '	enter into an investment advisory contract	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	enter into an investment advisory contract	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	enter into an investment advisory contract	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	enter into an investment advisory contract	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	enter into an investment advisory contract	'}"> checked='checked' : '' </c:if>
+						> 
 						Enter into invmt advisory contract </label><br><label>
-						<input name="how" onclick="chkcontrol2(16)" type="checkbox" value="	give us your income information	"> 
+						<input name="how" onclick="chkcontrol2(16)" type="checkbox" value="	give us your income information	"
+						<c:if test="${information.how1== '	give us your income information	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	give us your income information	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	give us your income information	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	give us your income information	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	give us your income information	'}"> checked='checked' : '' </c:if>
+						> 
 						Give us your income information </label><br><label>
-						<input name="how" onclick="chkcontrol2(17)" type="checkbox" value="	provide employment information	"> 
+						<input name="how" onclick="chkcontrol2(17)" type="checkbox" value="	provide employment information	"
+						<c:if test="${information.how1== '	provide employment information	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	provide employment information	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	provide employment information	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	provide employment information	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	provide employment information	'}"> checked='checked' : '' </c:if>
+						> 
 						Provide employment information </label><br><label>
-						<input name="how" onclick="chkcontrol2(18)" type="checkbox" value="	give us your employment history	"> 
+						<input name="how" onclick="chkcontrol2(18)" type="checkbox" value="	give us your employment history	"
+						<c:if test="${information.how1== '	give us your employment history	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	give us your employment history	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	give us your employment history	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	give us your employment history	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	give us your employment history	'}"> checked='checked' : '' </c:if>
+						> 
 						Give us your employment history </label><br><label>
-						<input name="how" onclick="chkcontrol2(19)" type="checkbox" value="	tell us about your investment or retirement portfolio	"> 
+						<input name="how" onclick="chkcontrol2(19)" type="checkbox" value="	tell us about your investment or retirement portfolio	"
+						<c:if test="${information.how1== '	tell us about your investment or retirement portfolio	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	tell us about your investment or retirement portfolio	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	tell us about your investment or retirement portfolio	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	tell us about your investment or retirement portfolio	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	tell us about your investment or retirement portfolio	'}"> checked='checked' : '' </c:if>
+						> 
 						Tell us about investment or retirement portfolio </label>
 						<br><label>
-						<input name="how" onclick="chkcontrol2(20)" type="checkbox" value="	tell us about your investment or retirement earnings	"> 
+						<input name="how" onclick="chkcontrol2(20)" type="checkbox" value="	tell us about your investment or retirement earnings	"
+						<c:if test="${information.how1== '	tell us about your investment or retirement earnings	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	tell us about your investment or retirement earnings	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	tell us about your investment or retirement earnings	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	tell us about your investment or retirement earnings	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	tell us about your investment or retirement earnings	'}"> checked='checked' : '' </c:if>
+						> 
 						Tell us about investment or retirement earnings </label>
 						<br><label>
-						<input name="how" onclick="chkcontrol2(21)" type="checkbox" value="	apply for financing	"> 
+						<input name="how" onclick="chkcontrol2(21)" type="checkbox" value="	apply for financing	"
+						<c:if test="${information.how1== '	apply for financing	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	apply for financing	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	apply for financing	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	apply for financing	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	apply for financing	'}"> checked='checked' : '' </c:if>
+						> 
 						Apply for financing </label><br><label>
-						<input name="how" onclick="chkcontrol2(22)" type="checkbox" value="	apply for a lease	"> 
+						<input name="how" onclick="chkcontrol2(22)" type="checkbox" value="	apply for a lease	"
+						<c:if test="${information.how1== '	apply for a lease	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	apply for a lease	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	apply for a lease	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	apply for a lease	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	apply for a lease	'}"> checked='checked' : '' </c:if>
+						> 
 						Apply for a lease </label><br></div>
             <div class="col-sm-6 col-md-4">
 						<label>
-						<input name="how" onclick="chkcontrol2(	23	)" type="checkbox" value="	provide account information	"> 
+						<input name="how" onclick="chkcontrol2(	23	)" type="checkbox" value="	provide account information	"
+						<c:if test="${information.how1== '	provide account information	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	provide account information	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	provide account information	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	provide account information	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	provide account information	'}"> checked='checked' : '' </c:if>
+						> 
 						Provide account information </label><br><label>
-						<input name="how" onclick="chkcontrol2(	24	)" type="checkbox" value="	give us your contact information	"> 
+						<input name="how" onclick="chkcontrol2(	24	)" type="checkbox" value="	give us your contact information	"
+						<c:if test="${information.how1== '	give us your contact information	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	give us your contact information	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	give us your contact information	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	give us your contact information	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	give us your contact information	'}"> checked='checked' : '' </c:if>
+						> 
 						Give us your contact information </label><br><label>
-						<input name="how" onclick="chkcontrol2(	25	)" type="checkbox" value="	pay us by check	"> 
+						<input name="how" onclick="chkcontrol2(	25	)" type="checkbox" value="	pay us by check	"
+						<c:if test="${information.how1== '	pay us by check	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	pay us by check	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	pay us by check	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	pay us by check	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	pay us by check	'}"> checked='checked' : '' </c:if>
+						> 
 						Pay us by check </label><br><label>
-						<input name="how" onclick="chkcontrol2(	26	)" type="checkbox" value="	give us your wage statements	"> 
+						<input name="how" onclick="chkcontrol2(	26	)" type="checkbox" value="	give us your wage statements	"
+						<c:if test="${information.how1== '	give us your wage statements	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	give us your wage statements	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	give us your wage statements	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	give us your wage statements	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	give us your wage statements	'}"> checked='checked' : '' </c:if>
+						> 
 						Give us your wage statements </label><br><label>
-						<input name="how" onclick="chkcontrol2(	27	)" type="checkbox" value="	provide your mortgage information	"> 
+						<input name="how" onclick="chkcontrol2(	27	)" type="checkbox" value="	provide your mortgage information	"
+						<c:if test="${information.how1== '	provide your mortgage information	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	provide your mortgage information	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	provide your mortgage information	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	provide your mortgage information	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	provide your mortgage information	'}"> checked='checked' : '' </c:if>
+						> 
 						Provide your mortgage information </label><br><label>
-						<input name="how" onclick="chkcontrol2(	28	)" type="checkbox" value="	make a wire transfer	"> 
+						<input name="how" onclick="chkcontrol2(	28	)" type="checkbox" value="	make a wire transfer	"
+						<c:if test="${information.how1== '	make a wire transfer	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	make a wire transfer	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	make a wire transfer	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	make a wire transfer	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	make a wire transfer	'}"> checked='checked' : '' </c:if>
+						> 
 						Make a wire transfer </label><br><label>
-						<input name="how" onclick="chkcontrol2(	29	)" type="checkbox" value="	tell us who receives the money	"> 
+						<input name="how" onclick="chkcontrol2(	29	)" type="checkbox" value="	tell us who receives the money	"
+						
+						<c:if test="${information.how1== '	tell us who receives the money	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	tell us who receives the money	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	tell us who receives the money	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	tell us who receives the money	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	tell us who receives the money	'}"> checked='checked' : '' </c:if>> 
 						Tell us who receives the money </label><br><label>
-						<input name="how" onclick="chkcontrol2(	30	)" type="checkbox" value="	tell us where to send the money	"> 
+						<input name="how" onclick="chkcontrol2(	30	)" type="checkbox" value="	tell us where to send the money	"
+						
+						<c:if test="${information.how1== '	tell us where to send the money	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	tell us where to send the money	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	tell us where to send the money	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	tell us where to send the money	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	tell us where to send the money	'}"> checked='checked' : '' </c:if>
+						> 
 						Tell us where to send the money </label><br><label>
-						<input name="how" onclick="chkcontrol2(	31	)" type="checkbox" value="	show your government-issued ID	"> 
+						<input name="how" onclick="chkcontrol2(	31	)" type="checkbox" value="	show your government-issued ID	"
+						<c:if test="${information.how1== '	show your government-issued ID	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	show your government-issued ID	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	show your government-issued ID	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	show your government-issued ID	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	show your government-issued ID	'}"> checked='checked' : '' </c:if>
+						> 
 						Show your government-issued id </label><br><label>
-						<input name="how" onclick="chkcontrol2(	32	)" type="checkbox" value="	show your drivers license	"> 
+						<input name="how" onclick="chkcontrol2(	32	)" type="checkbox" value="	show your drivers license	"
+						<c:if test="${information.how1== '	show your drivers license	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	show your drivers license	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	show your drivers license	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	show your drivers license	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	show your drivers license	'}"> checked='checked' : '' </c:if>
+						> 
 						Show your driver's license </label><br><label>
-						<input name="how" onclick="chkcontrol2(	33	)" type="checkbox" value="	order a commodity futures or option trade	"> 
+						<input name="how" onclick="chkcontrol2(	33	)" type="checkbox" value="	order a commodity futures or option trade	"
+						<c:if test="${information.how1== '	order a commodity futures or option trade	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how2== '	order a commodity futures or option trade	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how3== '	order a commodity futures or option trade	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how4== '	order a commodity futures or option trade	'}"> checked='checked' : '' </c:if>
+						<c:if test="${information.how5== '	order a commodity futures or option trade	'}"> checked='checked' : '' </c:if>
+						> 
 						Order a commodity futures or option trade </label><br>
 						<br></div>
 				</div>
@@ -809,15 +1167,21 @@ $("#hide").click(function() {
 					<p></p>
 					<div class="controlset-pad">
 						<label>
-						<input id="collection1" checked name="collection" type="radio" value="1" /> 
+						<input id="collection1"  name="collection" type="radio" value="1" 
+						<c:if test="${information.collection== '1'}"> checked='checked' : '' </c:if>
+						/> 
 						We collect personal information from affiliates and/or credit 
 						bureaus</label><p></p>
 						<label>
-						<input id="collection2" name="collection" type="radio" value="2" /> 
+						<input id="collection2" name="collection" type="radio" value="2" 
+						<c:if test="${information.collection== '2'}"> checked='checked' : '' </c:if>
+						/> 
 						We collect personal information from other companies, different 
 						than affiliates and/or credit bureaus</label><p></p>
 						<label>
-						<input id="collection3" name="collection" type="radio" value="3" /> 
+						<input id="collection3" name="collection" type="radio" value="3" 
+						<c:if test="${information.collection== '3'}"> checked='checked' : '' </c:if>
+						/> 
 						We do not collect any personal information from affiliates, 
 						credit bureaus, or other companies </label></div>
 				</div>
@@ -842,11 +1206,17 @@ $("#hide").click(function() {
 					companies:</label><p></p>
 					<div class="controlset-pad">
 						<label>
-						<input id="affs3" checked name="affiliate" type="radio" value="1" /> 
+						<input id="affs3" name="affiliate" type="radio" value="1" 
+						<c:if test="${information.affiliate== '1'}"> checked='checked' : '' </c:if>
+						/> 
 						Company does not have affiliates</label> <label>
-						<input id="affs2" name="affiliate" type="radio" value="2" /> 
+						<input id="affs2" name="affiliate" type="radio" value="2" 
+						<c:if test="${information.affiliate== '2'}"> checked='checked' : '' </c:if>
+						/> 
 						Company does not share with affiliates</label> <label>
-						<input id="affs1" name="affiliate" onclick="enable_text(this.checked)" type="radio" value="3" /> 
+						<input id="affs1" name="affiliate" onclick="enable_text(this.checked)" type="radio" value="3" 
+						<c:if test="${information.affiliate== '3'}"> checked='checked' : '' </c:if>
+						/> 
 						Company shares consumers' personal information with affiliates</label>
 						<p></p>
 						<textarea id="fieldaf" class="form-control" disabled="disabled" name="affiliate" placeholder="Please state them." rows="3">Financial companies such as: N/A; non financial companies such as: N/A.</textarea>
@@ -863,10 +1233,14 @@ $("#hide").click(function() {
 					<p></p>
 					<div class="controlset-pad">
 						<label>
-						<input id="naffs2" checked name="naffiliate" type="radio" value="1" /> 
+						<input id="naffs2" name="naffiliate" type="radio" value="1" 
+						<c:if test="${information.naffiliate== '1'}"> checked='checked' : '' </c:if>
+						/> 
 						Company does not share with nonaffiliates 3rd parties</label>
 						<label>
-						<input id="naffs1" name="naffiliate" type="radio" value="2" /> 
+						<input id="naffs1" name="naffiliate" type="radio" value="2" 
+						<c:if test="${information.naffiliate== '2'}"> checked='checked' : '' </c:if>
+						/> 
 						Company shares with nonaffiliates 3rd parties</label>
 						<p></p>
 						<textarea id="fieldnaf" class="form-control" disabled="disabled" name="naffiliate" placeholder="Please state the nonaffiliates you share information with" rows="3"></textarea>
@@ -880,10 +1254,14 @@ $("#hide").click(function() {
 					<p></p>
 <div class="controlset-pad">
             <label>
-              <input type="radio" name="nonaffiliates" value="1" id="nonaffiliate1" checked/>
+              <input type="radio" name="nonaffiliates" value="1" id="nonaffiliate1" 
+			<c:if test="${information.nonaffiliates== '1'}"> checked='checked' : '' </c:if>
+				/>
               Company does not jointly market</label></p>
             <label>
-              <input type="radio" name="nonaffiliates" value="2" id="nonaffiliate2" onclick="enable_text(this.checked)"/>
+              <input type="radio" name="nonaffiliates" value="2" id="nonaffiliate2" onclick="enable_text(this.checked)"
+              <c:if test="${information.nonaffiliates== '2'}"> checked='checked' : '' </c:if>
+              />
               Company does jointly market with the following partners:</label></p><br>
  		<textarea id="joint" class="form-control" disabled="disabled" name="nonaffiliates" placeholder="Please state your joint marketing partners" rows="3"></textarea>
        
@@ -932,9 +1310,13 @@ $("#hide").click(function() {
 						<a title="PDF form generated by this tool that customerswould print and mail out to your address">
 						<span class="glyphicon glyphicon-info-sign"></span>
 						</span></a></label><br><label class="radio-inline">
-						<input id="yesmailin" name="mailin" type="radio" value="Yes" /> 
+						<input id="yesmailin" name="mailin" type="radio" value="Yes" 
+						<c:if test="${information.mailin== 'Yes'}"> checked='checked' : '' </c:if>
+						/> 
 						Yes</label> <label class="radio-inline">
-						<input id="nomailin" checked name="mailin" type="radio" value="No" /> 
+						<input id="nomailin" name="mailin" type="radio" value="No" 
+						<c:if test="${information.mailin== 'No'}"> checked='checked' : '' </c:if>
+						/> 
 						No </label>
 						<p></p>
 						<br><label>Can they limit sharing through other ways? If 
@@ -970,10 +1352,14 @@ Call direct line 888-123-8791" rows="2" /></textarea> </div>
 						</span></a></label><br>
 						<p></p>
 						<label>
-						<input id="choice" name="choice" type="radio" value="only to your" /> 
+						<input id="choice" name="choice" type="radio" value="only to your" 
+						<c:if test="${information.choice== 'only to your'}"> checked='checked' : '' </c:if>
+						/> 
 						Choices will apply only to that customer, unless otherwise 
 						requested</label><label>
-						<input id="choice" checked name="choice" type="radio" value="to everyone" /> 
+						<input id="choice" name="choice" type="radio" value="to everyone" 
+						<c:if test="${information.choice== 'to everyone'}"> checked='checked' : '' </c:if>
+						/> 
 						Choices will apply to everyone, unless otherwise requested</label>
 						<p></p>
 					</div>

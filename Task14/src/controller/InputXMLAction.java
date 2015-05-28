@@ -1,3 +1,9 @@
+/**************************
+ * @author Charlotte Lin
+ * @date 05/28/2015
+ * @description for uploading XML file
+ **************************/
+
 package controller;
 
 import java.io.File;
@@ -82,14 +88,42 @@ public class InputXMLAction extends Action {
 		list.add("address");
 		list.add("city");
 		list.add("zipcode");
-		list.add("state");
-		list.add("whatinfo0");
+		list.add("state");	
+		list.add("sharing1");
+		list.add("optout1");
+		list.add("sharing2");
+		list.add("optout2");
+		list.add("sharing3");
+		list.add("optout3");
+		list.add("sharing4");
+		list.add("optout4");
+		list.add("sharing5");
+		list.add("optout5");
+		list.add("sharing6");
+		list.add("optout6");
+		list.add("sharing7");
+		list.add("measures");		
+		list.add("collection");
+		list.add("affiliate");
+		list.add("naffiliate");
+		list.add("nonaffiliates");
+		list.add("mailin");
+		list.add("others");
+		list.add("others2");
+		list.add("choice");
+		list.add("others3");
+		list.add("others7");
+		
 		list.add("whatinfo1");
 		list.add("whatinfo2");
 		list.add("whatinfo3");
 		list.add("whatinfo4");
-		list.add("whatinfo5");
-		list.add("whatinfo6");
+		
+		list.add("how1");
+		list.add("how2");
+		list.add("how3");
+		list.add("how4");
+		list.add("how5");
 		
 		try {
 			File file = new File(path);
@@ -105,15 +139,59 @@ public class InputXMLAction extends Action {
 			for (String s : list) {
 				nodeList = root.getElementsByTagName(s);
 				Element element = (Element) nodeList.item(0);
-				nodeList = element.getChildNodes();
-				if (((Node) nodeList.item(0)) == null) res.add("");
-				else res.add(((Node) nodeList.item(0)).getNodeValue());				
+				if (element == null) res.add("");
+				else {
+					nodeList = element.getChildNodes();
+					if (((Node) nodeList.item(0)) == null) res.add("");
+					else res.add(((Node) nodeList.item(0)).getNodeValue());	
+				}
 			}
 			System.out.println(res);
-			info = new Information(res.get(0), res.get(1), res.get(2), res.get(3), res.get(4),
-					res.get(5), res.get(6), res.get(7), res.get(8), res.get(9), res.get(10), 
-					res.get(11), res.get(12), res.get(13), res.get(14), res.get(15), res.get(16), 
-					res.get(17));
+			info = new Information(
+					res.get(0), 
+					res.get(1), 
+					res.get(2), 
+					res.get(3), 
+					res.get(4),
+					res.get(5), 
+					res.get(6), 
+					res.get(7), 
+					res.get(8), 
+					res.get(9), 
+					res.get(10), 
+					res.get(11), 
+					res.get(12), 
+					res.get(13), 
+					res.get(14), 
+					res.get(15), 
+					res.get(16), 
+					res.get(17), 
+					res.get(18), 
+					res.get(19), 
+					res.get(20), 
+					res.get(21), 
+					res.get(22), 
+					res.get(23), 
+					res.get(24), 
+					res.get(25), 
+					res.get(26), 
+					res.get(27), 
+					res.get(28), 
+					res.get(29), 
+					res.get(30), 
+					res.get(31), 
+					res.get(32), 
+					res.get(33),
+					res.get(34),
+					res.get(35),
+					res.get(36),
+					res.get(37),
+					res.get(38),
+					res.get(39),
+					res.get(40),
+					res.get(41),
+					res.get(42),
+					res.get(43));
 			return info;
 		} catch (Exception e) {
 			e.printStackTrace();

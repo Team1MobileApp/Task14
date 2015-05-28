@@ -1,3 +1,9 @@
+/**************************
+ * @author Charlotte Lin
+ * @date 05/28/2015
+ * @description model
+ **************************/
+
 package model;
 
 import javax.servlet.ServletConfig;

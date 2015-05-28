@@ -1,3 +1,9 @@
+/**************************
+ * @author Charlotte Lin
+ * @date 05/28/2015
+ * @description for downloading XML file
+ **************************/
+
 package controller;
 
 import java.io.File;
@@ -69,7 +75,7 @@ public class OutputXMLAction extends Action {
 	        Document dom = db.newDocument();
 	        
 	        ArrayList<String> list = new ArrayList<String>();
-			list.add("company");
+	        list.add("company");
 			list.add("entity");
 			list.add("entities");
 			list.add("joint");
@@ -79,14 +85,43 @@ public class OutputXMLAction extends Action {
 			list.add("address");
 			list.add("city");
 			list.add("zipcode");
-			list.add("state");
-			list.add("whatinfo0");
+			list.add("state");			
+			list.add("sharing1");
+			list.add("optout1");
+			list.add("sharing2");
+			list.add("optout2");
+			list.add("sharing3");
+			list.add("optout3");
+			list.add("sharing4");
+			list.add("optout4");
+			list.add("sharing5");
+			list.add("optout5");
+			list.add("sharing6");
+			list.add("optout6");
+			list.add("sharing7");
+			list.add("measures");			
+			list.add("collection");
+			list.add("affiliate");
+			list.add("naffiliate");
+			list.add("nonaffiliates");
+			list.add("mailin");
+			list.add("others");
+			list.add("others2");
+			list.add("choice");
+			list.add("others3");
+			list.add("others7");
+			
 			list.add("whatinfo1");
 			list.add("whatinfo2");
 			list.add("whatinfo3");
 			list.add("whatinfo4");
-			list.add("whatinfo5");
-			list.add("whatinfo6");
+			
+			list.add("how1");
+			list.add("how2");
+			list.add("how3");
+			list.add("how4");
+			list.add("how5");
+			
 			
 	        // create element1
 	        Element root = dom.createElement("root");

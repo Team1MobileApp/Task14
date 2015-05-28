@@ -1,3 +1,9 @@
+/**************************
+ * @author Charlotte Lin
+ * @date 05/28/2015
+ * @description dispatching
+ **************************/
+
 package controller;
 
 import java.io.FileNotFoundException;
@@ -78,14 +84,47 @@ public class ChooseAction extends Action {
 				info.add(form.getAddress());
 				info.add(form.getCity());
 				info.add(form.getZipcode());
-				info.add(form.getState());
-				info.add(form.getWhatinfo0());
-				info.add(form.getWhatinfo1());
-				info.add(form.getWhatinfo2());
-				info.add(form.getWhatinfo3());
-				info.add(form.getWhatinfo4());
-				info.add(form.getWhatinfo5());
-				info.add(form.getWhatinfo6());	
+				info.add(form.getState());				
+				info.add(form.getSharing1());
+				info.add(form.getOptout1());
+				info.add(form.getSharing2());
+				info.add(form.getOptout2());
+				info.add(form.getSharing3());
+				info.add(form.getOptout3());
+				info.add(form.getSharing4());
+				info.add(form.getOptout4());
+				info.add(form.getSharing5());
+				info.add(form.getOptout5());
+				info.add(form.getSharing6());
+				info.add(form.getOptout6());
+				info.add(form.getSharing7());
+				info.add(form.getMeasures());				
+				info.add(form.getCollection());
+				info.add(form.getAffiliate());
+				info.add(form.getNaffiliate());
+				info.add(form.getNonaffiliates());
+				info.add(form.getMailin());
+				info.add(form.getOthers());
+				info.add(form.getOthers2());
+				info.add(form.getChoice());
+				info.add(form.getOthers3());
+				info.add(form.getOthers7());
+				
+				info.add(form.getWhatinfo()[0]);
+				info.add(form.getWhatinfo()[1]);
+				info.add(form.getWhatinfo()[2]);
+				info.add(form.getWhatinfo()[3]);
+				
+				info.add(form.getHow()[0]);
+				info.add(form.getHow()[1]);
+				info.add(form.getHow()[2]);
+				info.add(form.getHow()[3]);
+				info.add(form.getHow()[4]);
+				
+				
+				System.out.println("************" + Arrays.toString(form.getWhatinfo()));
+				System.out.println("************" + Arrays.toString(form.getHow()));
+				
 				System.out.println(info);
 				HttpSession session = request.getSession();
 				session.setAttribute("info", info);

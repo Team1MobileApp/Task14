@@ -1,3 +1,9 @@
+/**************************
+ * @author Charlotte Lin
+ * @date 05/28/2015
+ * @description welcome
+ **************************/
+
 package controller;
 
 import java.io.File;
