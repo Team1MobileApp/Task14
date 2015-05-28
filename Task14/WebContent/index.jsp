@@ -1,5 +1,6 @@
 <%@ page import="databeans.Information"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -298,7 +299,7 @@ $("#hide").click(function() {
 			</div>
 			<div>
 				<a class="page-scroll btn btn-xl" href="#institution">Create New 
-				CPN</a> &nbsp; &nbsp; <a class="page-scroll btn btn-xl" href="#">
+				CPN</a> &nbsp; &nbsp; <a class="page-scroll btn btn-xl" href="InputXML.do">
 				Import XML File</a> </div>
 		</div>
 	</div>
@@ -450,7 +451,8 @@ $("#hide").click(function() {
 				collect and share consumer's information. </h3>
 			</div>
 		</div>
-		<!-- Form Continues-->
+      
+      <!-- Form Continues-->
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="form-group">
@@ -575,7 +577,8 @@ $("#hide").click(function() {
 							<td>Sharing with service providers for your company's 
 							own marketing</td>
 							<td>
-							<div class="form-group">
+                  
+                  <td><div class="form-group">
 								<label class="radio-inline">
 								<input id="yes" name="sharing2" type="radio" value="Yes" /> 
 								Yes </label><label class="radio-inline">
@@ -651,7 +654,7 @@ $("#hide").click(function() {
 								Yes </label></div>
 							</td>
 						</tr>
-						<tr>
+                <tr>
 							<td>For your affiliates to market your customers.
 							<a title="Consumers are granted the right to opt out indifinitely in this case. If you select 'No' or 'Does not aply' this reason will not be included in the notice. For details regarding a separate notice refer to Â§624 FRCA.">
 							<span class="glyphicon glyphicon-info-sign"></span>
@@ -705,7 +708,7 @@ $("#hide").click(function() {
 					</table>
 					<p></p>
 					<br><hr><br>
-					<h5>How do you collect and protect consumers' personal information?</h5>
+            <h5>How do you collect and protect consumers' personal information?</h5>
 					<p><font color="#333333">To protect personal information from 
 					unauthorized access and use, federal law requires computer safeguards 
 					and secured files and buildings.</font> </p>
@@ -770,7 +773,7 @@ $("#hide").click(function() {
 						Apply for financing </label><br><label>
 						<input name="how" onclick="chkcontrol2(22)" type="checkbox" value="	apply for a lease	"> 
 						Apply for a lease </label><br></div>
-					<div class="col-sm-6 col-md-4">
+            <div class="col-sm-6 col-md-4">
 						<label>
 						<input name="how" onclick="chkcontrol2(	23	)" type="checkbox" value="	provide account information	"> 
 						Provide account information </label><br><label>
@@ -820,6 +823,8 @@ $("#hide").click(function() {
 				</div>
 				<br><br><br></div>
 		</div>
+
+
 		<div class="row">
 			<div class="form-group">
 				<hr>
@@ -832,7 +837,7 @@ $("#hide").click(function() {
 				<span class="glyphicon glyphicon-info-sign"></span></span></a>
 				</font></p>
 				<br>
-				<div class="col-md-4">
+<div class="col-md-4">
 					<label>Please indicate your sharing practices with affiliated 
 					companies:</label><p></p>
 					<div class="controlset-pad">
@@ -848,7 +853,8 @@ $("#hide").click(function() {
 					</div>
 					<p></p>
 				</div>
-				<div class="col-md-4">
+ 
+ 				<div class="col-md-4">
 					<label>Please indicate your sharing practices with nonaffiliated 
 					companies.
 					<a title="This includes all 3rd party companies, whether they are financial or non-financial companies">
@@ -866,24 +872,25 @@ $("#hide").click(function() {
 						<textarea id="fieldnaf" class="form-control" disabled="disabled" name="naffiliate" placeholder="Please state the nonaffiliates you share information with" rows="3"></textarea>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<label>Is your company enganged in Joint Marketing programs?
+  <div class="col-md-4">
+<label>Is your company enganged in Joint Marketing programs?
 					<a title="These are formal agreements with nonaffiliated financial companies to market financial products or services to your customers">
 					<span class="glyphicon glyphicon-info-sign"></span></span>
 					</a></label>
 					<p></p>
-					<div class="controlset-pad">
-						<label>
-						<input id="hide" checked name="joint" type="radio" value="1" /> 
-						Company does not jointly market</label> <label>
-						<input id="show" name="joint" type="radio" value="2" /> 
-						Company does jointly market with the following partners:</label><br>
-						<br>
-						<p></p>
-						<textarea id="joint" class="form-control" disabled="disabled" name="joints" placeholder="Please state your joint marketing partners" rows="3"></textarea>
-					</div>
-				</div>
-			</div>
+<div class="controlset-pad">
+            <label>
+              <input type="radio" name="nonaffiliates" value="1" id="nonaffiliate1" checked/>
+              Company does not jointly market</label></p>
+            <label>
+              <input type="radio" name="nonaffiliates" value="2" id="nonaffiliate2" onclick="enable_text(this.checked)"/>
+              Company does jointly market with the following partners:</label></p><br>
+ 		<textarea id="joint" class="form-control" disabled="disabled" name="nonaffiliates" placeholder="Please state your joint marketing partners" rows="3"></textarea>
+       
+ </div>
+ </div>
+ 
+ <br></p> 
 			<div class="row">
 				<div class="col-lg-12">
 					<br>
@@ -898,6 +905,7 @@ $("#hide").click(function() {
 		</div>
 	</div>
 </section>
+  
 <!-- Other Section -->
 <section id="other">
 	<div class="container">

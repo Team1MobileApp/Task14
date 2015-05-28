@@ -1,5 +1,6 @@
 package controller;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -12,6 +13,7 @@ import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -36,10 +38,10 @@ import formbeans.SearchForm;
 public class OutputXMLAction extends Action {
 	private FormBeanFactory<SearchForm> formBeanFactory = FormBeanFactory
 			.getInstance(SearchForm.class);
-
+	ServletConfig config;
 	// constructor
 	public OutputXMLAction(Model model) {
-		
+		this.config = model.config;
 	}
 
 	SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
@@ -52,8 +54,10 @@ public class OutputXMLAction extends Action {
 	// return next page name
 	public String perform(HttpServletRequest request, HttpServletResponse response) {
 		HttpSession session = request.getSession();
-		ArrayList<String> info = (ArrayList<String>) session.getAttribute("info");		
-		String path = "WebContent/test.xml";
+		ArrayList<String> info = (ArrayList<String>) session.getAttribute("info");	
+		
+		System.out.println("***********" + config.getServletContext().getRealPath(""));
+		String path = config.getServletContext().getRealPath("") + "/Output/XMLFile.xml";
 		generateXMLFile(path, info);
 		return "index.jsp";		
 	}
@@ -100,7 +104,12 @@ public class OutputXMLAction extends Action {
 	        	tf.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
 	        	tf.setOutputProperty(OutputKeys.INDENT, "yes");
 	        Writer out = new StringWriter();
-	        tf.transform(new DOMSource(dom), new StreamResult(new FileOutputStream(path)));
+	        FileOutputStream file = new FileOutputStream(path);
+	               
+	        tf.transform(new DOMSource(dom), new StreamResult(file));
+	        
+	        File position = new File(path);
+	        System.out.println(position.getPath());
 	           
 	        } catch (TransformerException te) {
 	            System.out.println(te.getMessage());

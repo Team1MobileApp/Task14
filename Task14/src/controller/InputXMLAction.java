@@ -15,6 +15,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -47,10 +48,10 @@ import formbeans.PathForm;
 public class InputXMLAction extends Action {
 	private FormBeanFactory<PathForm> formBeanFactory = FormBeanFactory
 			.getInstance(PathForm.class);
-
+	ServletConfig config;
 	// constructor
 	public InputXMLAction(Model model) {
-		
+		this.config = model.config;
 	}
 
 	// get action name
@@ -60,7 +61,7 @@ public class InputXMLAction extends Action {
 
 	// return next page name
 	public String perform(HttpServletRequest request, HttpServletResponse response) {
-			String path = "WebContent/test.xml";		
+		String path = config.getServletContext().getRealPath("") + "/Output/XMLFile.xml";
 			Information info = parseXMLFile(path);
 			request.setAttribute("information", info);
 			return "index.jsp";
