@@ -115,7 +115,11 @@ public class ChooseAction extends Action {
 					info.add("");
 					info.add("");
 					info.add("");
-				} else {
+				} else if (form.getWhatinfo().length < 4) {
+					int length = form.getWhatinfo().length;
+					for (int i = 0; i < length; i++) {
+						
+					}
 					info.add(form.getWhatinfo()[0]);
 					info.add(form.getWhatinfo()[1]);
 					info.add(form.getWhatinfo()[2]);
