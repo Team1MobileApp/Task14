@@ -25,7 +25,11 @@
 <div class="container">
 <hr> 
 <button class="btn btn-danger" onclick="myFunction()">Print Form</button>
-
+</p>
+<b><Instructions:</b> <br>
+1. Fill out the form online and print it or print it and fill it manually.<br>
+2. Mail it in an enclosed envelope to the address indicated on the form.
+<br>
 <script>
 function myFunction() {
     window.print();
@@ -33,7 +37,7 @@ function myFunction() {
 </script>
 <hr>
 <div class="row">
-   <div class="col-md-12">
+   <div class="col-md-10">
 <table class="table table-bordered">
 <thead>
 <tr class="danger">
@@ -61,30 +65,32 @@ Mark any/all you want to limit:
 </tr>
 <tr>
 <td bgcolor="#CCCCCC">Name:</td>
-<td width="30%">&nbsp;</td>
-<td><b>Mail To</b></td>
+<td width="30%"><input type="text" style="border:0px" placeholder="e.g. Joan Doe" /></td>
+<td><b>Mail To:</b></td>
 </tr>
 
 <tr>
 <td bgcolor="#CCCCCC" rowspan="2">Address:</td>
-<td></td>
+<td><input type="text" style="border:0px" placeholder="Doe" /></td>
 <td>[Institution]</td>
 </tr>
 
 <tr>
-<td>&nbsp;</td>
+<td><input type="text" style="border:0px" placeholder="5000 Forbes Ave." /></td>
 <td rowspan="3">[Address]</td>
 </tr>
 
 <tr>
 <td bgcolor="#CCCCCC" style="width: 9%">City, State, Zip:</td>
-<td>
+<td> <input type="text" style="border:0px" placeholder="Pittsburgh" /><br>
+<input type="text" style="border:0px" placeholder="PA" /><br>
+<input type="text" style="border:0px" placeholder="15232" />
 </td>
 </tr>
 
 <tr>
 <td bgcolor="#CCCCCC" style="width: 9%">Account #:</td>
-<td>
+<td><input type="text" style="border:0px" placeholder="3923-2212204-22" />
 </td>
 </tr>
 
