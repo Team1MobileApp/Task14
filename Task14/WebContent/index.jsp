@@ -202,6 +202,18 @@ $("#hide").click(function() {
 });//]]>  
 </script>
 
+<script type="text/javascript">
+$(window).load(function(){
+$('#preview').click(function () {
+    var href = $("#demo").attr('class');
+    var href = href.replace('disabled', 'D');
+    $("#demo").attr('class', href);
+    //reload iframe
+    document.getElementById('notice').contentWindow.location.reload(true);
+    alert("success");
+});
+});
+</script>
 
 
 </head>
@@ -1424,32 +1436,29 @@ Call direct line 888-123-8791" rows="2" /></textarea> </div>
 		<div class="row">
 			<div class="col-md-12 text-center">
 				<h2 class="section-heading">Preview &amp; Download</h2>
-				<p>If you have completed the form you can generate the notice and 
+				<div class="col-md-12 text-center">
+				<h2 class="section-heading">Preview &amp; Download</h2>
+				<p><font color="#333333">If you have completed the form you can generate the notice and 
 				preview it.<br>If you wish to save your work and continue later 
-				download the XML file. </p>
+				download the XML file.</font></p>
 				<br><br></div>
-			<!-- Reloads the iframe -->
-			<script>
-function preview() {
-document.getElementById('notice').contentWindow.location.reload(true);
-}
-</script>
-			<div class="col-md-12 text-center">
-				<input class="btn btn-xl" onclick="preview()" type="submit" value="Generate Notice" /><br>
+			
+		<div class="col-md-12 text-center">
+				<input id="preview" class="btn btn-xl" type="submit" value="Generate Notice" /><br>
 				<br><br></div>
 			<div class="row">
 				<div class="col-sm-3">
 				</div>
 				<div class="col-sm-6 text-left">
 					<div class="list-group">
-						<a class="portfolio-link btn btn-lg list-group-item" data-toggle="modal" href="#portfolioModal1">
+						<a id="demo" class="portfolio-link btn btn-lg list-group-item disabled" data-toggle="modal" href="#portfolioModal1">
 						<span class="glyphicon glyphicon-eye-open"></span>Preview</a>
 						<p class="list-group-item"><font color="orange">
 						<span class="glyphicon glyphicon-pencil"></span><b>Changes:</font></b> 
-						Use top bar to navigate through the form and re-submit notice.</p>
+						<font color="#333333">Use top bar to navigate through the form and re-submit notice.</font></p>
 						<p class="list-group-item"><font color="green">
 						<span class="glyphicon glyphicon-ok"></span><b>Ready:</font></b> 
-						Use the options below to download the Notice.</p>
+						<font color="#333333">Use the options below to download the Notice.</font></p>
 					</div>
 				</div>
 				<div class="col-sm-3">
@@ -1476,10 +1485,9 @@ document.getElementById('notice').contentWindow.location.reload(true);
       </form><br><br></div>
 			<div class="col-md-4 text-center">
 				<h4>PLAIN TEXT WEBPAGE</h4>
-				This option downloads a Zip Folder containing a plain HTML version 
-				of the Notice without any formatting, plus the XML File. It is recommended 
+				This option downloads a Zip folder containing the Notice without any formatting, plus the XML File. It is recommended 
 				if you want to embed the notice in your institution's website with 
-				your own formatting. <br><br>
+				your own styles. You will need to add your style sheets on the head of the notice.html file. <br><br>
 				<form method="post" action="downloadHtml.do">
       <button type="submit" class="btn btn-lg" name="action" value="downloadHtml">Download Plain Web Page</button>
       </form><br><br></div>

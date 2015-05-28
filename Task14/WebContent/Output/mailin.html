@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Uniform Privacy Policy for Financial Institutions implemented by FTC">
+    <meta name="author" content="FTC">
+
+    <title>Mail-In Form</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<style type="text/css">
+	.auto-style1 {
+		text-align: center;
+	}
+	</style>
+</head>
+
+<body>
+<div class="container">
+<hr> 
+<button class="btn btn-danger" onclick="myFunction()">Print Form</button>
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+<hr>
+<div class="row">
+   <div class="col-md-12">
+<table class="table table-bordered">
+<thead>
+<tr class="danger">
+<th align="center" "width="100%" colspan="4" class="auto-style1">Mail-in Form</th>
+</thead>
+<tbody>
+
+<tr>
+<td width="30%" rowspan="6">
+If you have a joint account, your choice(s) should apply to:
+<br><br>
+<label><input type="checkbox" value="">Apply my choices only to me</label>
+<br><br>
+<label><input type="checkbox" value="">Apply my choices to everyone</label>
+</td>
+<td width="70%" colspan="3">
+Mark any/all you want to limit:
+<h4 class="text-success text-left">Do not share my information for the purpose(s) of:</h4>
+<!-- All options are based on what "all opt-out" in the opt-out form, and whose company provides a mail-in form option -->
+<div class="checkbox"><label><input type="checkbox" value="">[option1]</label>
+<div class="checkbox"><label><input type="checkbox" value="">[option2]</label>
+<div class="checkbox"><label><input type="checkbox" value="">[option3]</label>
+<div class="checkbox"><label><input type="checkbox" value="">[option4]</label>
+</td>
+</tr>
+<tr>
+<td bgcolor="#CCCCCC">Name:</td>
+<td width="30%">&nbsp;</td>
+<td><b>Mail To</b></td>
+</tr>
+
+<tr>
+<td bgcolor="#CCCCCC" rowspan="2">Address:</td>
+<td></td>
+<td>[Institution]</td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+<td rowspan="3">[Address]</td>
+</tr>
+
+<tr>
+<td bgcolor="#CCCCCC" style="width: 9%">City, State, Zip:</td>
+<td>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="#CCCCCC" style="width: 9%">Account #:</td>
+<td>
+</td>
+</tr>
+
+</tbody>
+</table>     
+</div>
+    </div>
+</div>
+</body>
+</html>
