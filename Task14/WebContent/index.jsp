@@ -1,4 +1,4 @@
-<%@ page import="databeans.Information"%>
+﻿<%@ page import="databeans.Information"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
@@ -310,29 +310,38 @@ $("#hide").click(function() {
 					the XML file to save your work. </p>
 					<br><br></div>
 			</div>
-			<div>
+			<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-3">
 				<a class="page-scroll btn btn-xl" href="#institution">Create New 
-				CPN</a> &nbsp; &nbsp; <a class="page-scroll btn btn-xl" href="InputXML.do">
-				Import XML File</a> </div>
-		</div>
-	</div>
-	
-	<form action="InputXML.do" method="POST" enctype="multipart/form-data">
+				CPN</a>
+				</div>
+			<div class="col-md-3">				
+                  <a class="page-scroll btn btn-xl" data-toggle="collapse" data-target="#import">
+          Import XML File</a>
+		        
+        	<div id="import" class="collapse">
+             <form action="InputXML.do" method="POST" enctype="multipart/form-data">
 				<table>
 					<tr>
 						<td>
-							<div style="margin: 30px">
+							<div style="margin: 10px">
 								<input type="file" name="file" title="Select the Backup File"
 									data-filename-placement="inside" />
 							</div>
 						</td>
 					</tr>
 					<tr>
-						<td align="center"><input type="submit" name="upload"
+						<td align="left">&nbsp; &nbsp;<input type="submit" name="upload"
 							class="btn btn-primary btn-primary-lg" value="Upload" /></td>
 					</tr>
 				</table>
 			</form>
+            </div>
+			</div>
+			</div>
+	</div>
+
 </header>
 <!-- First Section -->
 <section id="institution">
@@ -729,9 +738,7 @@ $("#hide").click(function() {
 						<tr>
 							<td>Sharing with service providers for your company's 
 							own marketing</td>
-							<td>
-                  
-                  <td><div class="form-group">
+                      <td><div class="form-group">
 								<label class="radio-inline">
 								<input id="yes" name="sharing2" type="radio" value="Yes" 
 								<c:if test="${information.sharing2== 'Yes'}"> checked='checked' : '' </c:if>
@@ -1452,8 +1459,6 @@ Call direct line 888-123-8791" rows="2" /></textarea> </div>
 <section id="save" class="bg-light-gray">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12 text-center">
-				<h2 class="section-heading">Preview &amp; Download</h2>
 				<div class="col-md-12 text-center">
 				<h2 class="section-heading">Preview &amp; Download</h2>
 				<p><font color="#333333">If you have completed the form you can generate the notice and 
