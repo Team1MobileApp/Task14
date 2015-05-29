@@ -505,6 +505,7 @@ $("#hide").click(function() {
 							<c:if test="${information.whatinfo2== '	Account balances	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo3== '	Account balances	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo4== '	Account balances	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo5== '	Account balances	'}"> checked='checked' : '' </c:if>
 							> 
 							Account balances </label><br><label>
 							<input name="whatinfo" type="checkbox" value="	Account transactions	"
@@ -512,6 +513,7 @@ $("#hide").click(function() {
 							<c:if test="${information.whatinfo2== '	Account transactions	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo3== '	Account transactions	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo4== '	Account transactions	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo5== '	Account transactions	'}"> checked='checked' : '' </c:if>
 							> 
 							Account transactions </label><br><label>
 							<input name="whatinfo" type="checkbox" value="	Assets	"
@@ -519,6 +521,7 @@ $("#hide").click(function() {
 							<c:if test="${information.whatinfo2== '	Assets	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo3== '	Assets	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo4== '	Assets	'}"> checked='checked' : '' </c:if>
+							
 							> 
 							Assets </label><br><label>
 							<input name="whatinfo" type="checkbox" value="	Checking account information	"
@@ -526,7 +529,7 @@ $("#hide").click(function() {
 							<c:if test="${information.whatinfo2== '	Checking account information	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo3== '	Checking account information	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo4== '	Checking account information	'}"> checked='checked' : '' </c:if>
-							
+							<c:if test="${information.whatinfo5== '	Checking account information	'}"> checked='checked' : '' </c:if>
 							> 
 							Checking account information </label><br><label>
 							<input name="whatinfo" type="checkbox" value="	Contact Information	"
@@ -534,6 +537,7 @@ $("#hide").click(function() {
 							<c:if test="${information.whatinfo2== '	Contact Information	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo3== '	Contact Information	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo4== '	Contact Information	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo5== '	Contact Information	'}"> checked='checked' : '' </c:if>
 							> 
 							Contact Information </label><br><label>
 							<input name="whatinfo" type="checkbox" value="	Credit card or other debt	"
@@ -541,6 +545,7 @@ $("#hide").click(function() {
 							<c:if test="${information.whatinfo2== '	Credit card or other debt	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo3== '	Credit card or other debt	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo4== '	Credit card or other debt	'}"> checked='checked' : '' </c:if>
+							
 							> 
 							Credit card or other debt </label><br><label>
 							<input name="whatinfo" type="checkbox" value="	Credit history	"
@@ -548,6 +553,7 @@ $("#hide").click(function() {
 							<c:if test="${information.whatinfo2== '	Credit history	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo3== '	Credit history	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo4== '	Credit history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo5== '	Credit history	'}"> checked='checked' : '' </c:if>
 							> 
 							Credit history </label><br><label>
 							<input name="whatinfo" type="checkbox" value="	Credit scores	"
@@ -564,6 +570,7 @@ $("#hide").click(function() {
 							<c:if test="${information.whatinfo2== '	Employment information	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo3== '	Employment information	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo4== '	Employment information	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo5== '	Employment information	'}"> checked='checked' : '' </c:if>
 							> 
 							Employment information </label><br><label>
 							<input name="whatinfo" type="checkbox" value="	Income information	"
@@ -571,6 +578,7 @@ $("#hide").click(function() {
 							<c:if test="${information.whatinfo2== '	Income information	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo3== '	Income information	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo4== '	Income information	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo5== '	Income information	'}"> checked='checked' : '' </c:if>
 							> 
 							Income information </label><br><label>
 							<input name="whatinfo" type="checkbox" value="	Insurance claim history	"
@@ -578,6 +586,7 @@ $("#hide").click(function() {
 							<c:if test="${information.whatinfo2== '	Insurance claim history	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo3== '	Insurance claim history	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo4== '	Insurance claim history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo5== '	Insurance claim history	'}"> checked='checked' : '' </c:if>
 							> 
 							Insurance claim history </label><br><label>
 							<input name="whatinfo" type="checkbox" value="	Insurance scores	"
@@ -585,6 +594,7 @@ $("#hide").click(function() {
 							<c:if test="${information.whatinfo2== '	Insurance scores	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo3== '	Insurance scores	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo4== '	Insurance scores	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo5== '	Insurance scores	'}"> checked='checked' : '' </c:if>
 							> 
 							Insurance scores </label><br><label>
 							<input name="whatinfo" onclick="chkcontrol(13)" type="checkbox" value="	Investment experiences	"
@@ -592,6 +602,7 @@ $("#hide").click(function() {
 							<c:if test="${information.whatinfo2== '	Investment experiences	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo3== '	Investment experiences	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo4== '	Investment experiences	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo5== '	Investment experiences	'}"> checked='checked' : '' </c:if>
 							> 
 							Investment experiences </label><br><label>
 							<input name="whatinfo" type="checkbox" value="	Medical expenses	"
@@ -599,6 +610,7 @@ $("#hide").click(function() {
 							<c:if test="${information.whatinfo2== '	Medical expenses	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo3== '	Medical expenses	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo4== '	Medical expenses	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo5== '	Medical expenses	'}"> checked='checked' : '' </c:if>
 							> 
 							Medical expenses </label><br><label>
 							<input name="whatinfo" type="checkbox" value="	Medical-related debts	"
@@ -606,6 +618,7 @@ $("#hide").click(function() {
 							<c:if test="${information.whatinfo2== '	Medical-related debts	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo3== '	Medical-related debts	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo4== '	Medical-related debts	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo5== '	Medical-related debts	'}"> checked='checked' : '' </c:if>
 							> 
 							Medical-related debts </label><br><label>
 							<input name="whatinfo" type="checkbox" value="	Mortgage rates and payments	"
@@ -613,6 +626,7 @@ $("#hide").click(function() {
 							<c:if test="${information.whatinfo2== '	Mortgage rates and payments	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo3== '	Mortgage rates and payments	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo4== '	Mortgage rates and payments	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo5== '	Mortgage rates and payments	'}"> checked='checked' : '' </c:if>
 							> 
 							Mortgage rates and payments </label><br></div>
 						<div class="col-sm-6 col-md-4">
@@ -622,6 +636,7 @@ $("#hide").click(function() {
 							<c:if test="${information.whatinfo2== '	Overdue history	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo3== '	Overdue history	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo4== '	Overdue history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo5== '	Overdue history	'}"> checked='checked' : '' </c:if>
 							> 
 							Overdue history </label><br><label>
 							<input name="whatinfo" type="checkbox" value="	Payments history	"
@@ -629,6 +644,7 @@ $("#hide").click(function() {
 							<c:if test="${information.whatinfo2== '	Payments history	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo3== '	Payments history	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo4== '	Payments history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo5== '	Payments history	'}"> checked='checked' : '' </c:if>
 							> 
 							Payments history </label><br><label>
 							<input name="whatinfo" type="checkbox" value="	Profit/loss history	"
@@ -636,6 +652,7 @@ $("#hide").click(function() {
 							<c:if test="${information.whatinfo2== '	Profit/loss history	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo3== '	Profit/loss history	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo4== '	Profit/loss history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo5== '	Profit/loss history	'}"> checked='checked' : '' </c:if>
 							> 
 							Profit/loss history </label><br><label>
 							<input name="whatinfo" type="checkbox" value="	Purchase history	"
@@ -643,6 +660,7 @@ $("#hide").click(function() {
 							<c:if test="${information.whatinfo2== '	Purchase history	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo3== '	Purchase history	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo4== '	Purchase history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo5== '	Purchase history	'}"> checked='checked' : '' </c:if>
 							> 
 							Purchase history </label><br><label>
 							<input name="whatinfo" type="checkbox" value="	Retirement assets	"
@@ -650,6 +668,7 @@ $("#hide").click(function() {
 							<c:if test="${information.whatinfo2== '	Retirement assets	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo3== '	Retirement assets	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo4== '	Retirement assets	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo5== '	Retirement assets	'}"> checked='checked' : '' </c:if>
 							> 
 							Retirement assets </label><br><label>
 							<input name="whatinfo" type="checkbox" value="	Risk tolerance	"
@@ -657,6 +676,7 @@ $("#hide").click(function() {
 							<c:if test="${information.whatinfo2== '	Risk tolerance	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo3== '	Risk tolerance	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo4== '	Risk tolerance	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo5== '	Risk tolerance	'}"> checked='checked' : '' </c:if>
 							> 
 							Risk tolerance </label><br><label>
 							<input name="whatinfo" type="checkbox" value="	Transactions history	"
@@ -664,6 +684,7 @@ $("#hide").click(function() {
 							<c:if test="${information.whatinfo2== ' 	Transactions history	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo3== '	Transactions history	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo4== '	Transactions history	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo5== '	Transactions history	'}"> checked='checked' : '' </c:if>
 							> 
 							Transactions history </label><br><label>
 							<input name="whatinfo" type="checkbox" value="	Wire transfer instructions	"
@@ -671,6 +692,7 @@ $("#hide").click(function() {
 							<c:if test="${information.whatinfo2== '	Wire transfer instructions	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo3== '	Wire transfer instructions	'}"> checked='checked' : '' </c:if>
 							<c:if test="${information.whatinfo4== '	Wire transfer instructions	'}"> checked='checked' : '' </c:if>
+							<c:if test="${information.whatinfo5== '	Wire transfer instructions	'}"> checked='checked' : '' </c:if>
 							> 
 							Wire transfer instructions </label><br></div>
 					</div>
@@ -1345,9 +1367,12 @@ $("#hide").click(function() {
 						so, list them.</label>
 						<div class="controlset-pad">
 							<label class="radio-inline">
-							<input id="limits3" name="others" onclick="enable_text(this.checked)" type="radio" /> 
+							<input id="limits3" name="others" onclick="enable_text(this.checked)" value = "Yes" type="radio" 
+							<c:if test="${information.others== 'Yes'}"> checked='checked' : '' </c:if>
+							/> 
 							Yes</label> <label class="radio-inline">
-							<input id="limits2" checked name="others" type="radio" /> 
+							<input id="limits2" name="others" type="radio" value = "No"/> 
+							<c:if test="${information.others== 'No'}"> checked='checked' : '' </c:if>
 							No</label>
 							<p></p>
 							<textarea id="limitstext2" class="form-control" disabled="disabled" name="other_name" placeholder="e.g. Visit our branch,
@@ -1358,9 +1383,13 @@ Use our mobile app ABC, etc." rows="2" /></textarea> </div>
 						above? If so, list them.</label> <br>
 						<div class="controlset-pad">
 							<label class="radio-inline">
-							<input id="limits1" name="others2" onclick="enable_text(this.checked)" type="radio" /> 
+							<input id="limits1" name="others2" value = "Yes" onclick="enable_text(this.checked)" type="radio" 
+							<c:if test="${information.others2== 'Yes'}"> checked='checked' : '' </c:if>
+							/> 
 							Yes</label> <label class="radio-inline">
-							<input id="limits0" checked name="others2" type="radio" /> 
+							<input id="limits0" value = "Yes" name="others2" type="radio" 
+							<c:if test="${information.others2== 'No'}"> checked='checked' : '' </c:if>
+							/> 
 							No</label>
 							<p></p>
 							<textarea id="limitstext" class="form-control" disabled="disabled" name="other_name" placeholder="e.g. Visit www.othersite.com,
@@ -1396,9 +1425,13 @@ Call direct line 888-123-8791" rows="2" /></textarea> </div>
 						provide such additional rights?</label><br>
 						<div class="controlset-pad">
 							<label class="radio-inline">
-							<input id="limits5" name="others3" onclick="enable_text(this.checked)" type="radio" /> 
+							<input id="limits5" name="others3" value="Yes" onclick="enable_text(this.checked)" type="radio" 
+							<c:if test="${information.others3== 'Yes'}"> checked='checked' : '' </c:if>
+							/> 
 							Yes</label> <label class="radio-inline">
-							<input id="limits4" checked name="others3" type="radio" /> 
+							<input id="limits4" name="others3" value="No" type="radio" 
+							<c:if test="${information.others3== 'No'}"> checked='checked' : '' </c:if>
+							/> 
 							No</label>
 							<p></p>
 							<textarea id="states" class="form-control" disabled="disabled" name="other_name" placeholder="If so, describe state privacy law provisions: e.g.
@@ -1413,9 +1446,13 @@ Call direct line 888-123-8791" rows="2" /></textarea> </div>
 							<a title="The acknowledgement of receipt form is intended to be filled out by consumers and sent back to you. It does not need to follow a particular format, and it is optional. If you do provide a link, it can be to an online form or a downloadable document such as a pdf file.">
 							<span class="glyphicon glyphicon-info-sign"></span>
 							</span></a></label><label class="radio-inline">
-							<input id="limits7" name="others7" onclick="enable_text(this.checked)" type="radio" /> 
+							<input id="limits7" name="others7" value="Yes" onclick="enable_text(this.checked)" type="radio" 
+							<c:if test="${information.others7== 'Yes'}"> checked='checked' : '' </c:if>
+							/> 
 							Yes</label> <label class="radio-inline">
-							<input id="limits6" checked name="others7" type="radio" /> 
+							<input id="limits6" value="No" name="others7" type="radio" 
+							<c:if test="${information.others7== 'No'}"> checked='checked' : '' </c:if>
+							/> 
 							No</label>
 							<p></p>
 							<input id="receipt" class="form-control" disabled="disabled" name="other_name" type="url" value="http://" />
@@ -1485,8 +1522,7 @@ Call direct line 888-123-8791" rows="2" /></textarea> </div>
 			<div class="col-md-4 text-center">
 				<h4>STANDALONE WEBPAGE</h4>
 				This option downloads a Zip Folder containing a fully formatted 
-				HTML version of the Notice, including style sheets, plus the XML 
-				File. This version is the simplest way to incorporate the policy 
+				HTML version of the Notice, including style sheets. This version is the simplest way to incorporate the policy 
 				to you institution's website.<br><br>
 				<form method="post" action="download.do">
       <button type="submit" class="btn btn-lg" name="action" value="downloadFull" >Download Full Web Page</button>
