@@ -15,6 +15,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
+<script src="js/jquery.min.js"></script>
+<script src="js/optout.js"></script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -22,8 +25,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-
+ 
 
     <![endif]-->
 
@@ -31,7 +33,7 @@
 
 <body>
 <div class="container">
-<h3>[Institution]</h3> 
+<h3 id="institute"></h3> 
 <h4>Customer Privacy Preferences</h4>
 <hr>
 <div class="row">
@@ -42,6 +44,8 @@
 <input type="text" class="form-control" id="name" placeholder="Name or username id registered with the institution" required></p>
 <label>Please enter your email address</label><br>
 <input type="email" class="form-control" id="exampleInputEmail1" placeholder="name@email.com" required >
+<input type="hidden" id="company_email">
+
 </p>
 <hr>
 <table class="table table-hover table-condensed">
@@ -50,97 +54,7 @@
 <th width="350px">Sharing Purpose</th>
 <th width="150px">Preference<th>
 </thead>
-<tbody>
-
-<tr>
-<td>Everyday Business Purposes</td>
-<td>
-<![if cannot opt out]-->
-<select class="form-control" disabled>
-<option></option>
-<option selected>Yes</option>
-<option>No</option>
-
-</td>
-</tr>
-
-<tr>
-<td></span>For our Marketing Purposes</td>
-<td>
-<![if can opt out]-->
-<select class="form-control" required>
-<option></option>
-<option>Yes</option>
-<option>No</option>
-</td>
-</tr>
-
-<tr>
-<td>For joint marketing with other financial companies</td>
-<td>
-<![if can opt out]-->
-<select class="form-control" required>
-<option></option>
-<option>Yes</option>
-<option>No</option>
-</td>
-</tr>
-
-<tr>
-<td></span>For our affiliates everyday business purposes - Transactions and experiences</td>
-<td>
-<![if can opt out]-->
-<select class="form-control" required>
-<option></option>
-<option>Yes</option>
-<option>No</option>
-</td>
-</tr>
-
-<tr>
-<td></span>For our affiliates everyday business purposes - Creditworthiness</td>
-<td>
-<![if can opt out]-->
-<select class="form-control" required>
-<option></option>
-<option>Yes</option>
-<option>No</option>
-</td>
-</tr>
-
-<tr>
-<td>For our affiliates to market to you</td>
-<td>
-<![if can opt out]-->
-<select class="form-control" required>
-<option></option>
-<option>Yes</option>
-<option>No</option>
-</td>
-</tr>
-
-<tr>
-<td>For Non Affiliates to market to you</td>
-<td>
-<![if institution does not share]-->
-<select class="form-control" required>
-<option></option>
-<option>Yes</option>
-<option selected>No</option>
-</td>
-</tr>
-
-<tr>
-<td>Apply changes to Joint Accounts (If applicable) </td>
-<td>
-<![if institution does not share]-->
-<select class="form-control">
-<option></option>
-<option>To everyone</option>
-<option>Only me</option>
-<option>Does not Apply</option>
-</td>
-</tr>
+<tbody id="opt_form">
 
 </tbody>
 </table>
@@ -159,5 +73,13 @@ function myFunction() {
 </div>
     </div>
 </div>
+
+<!-- jQuery --> 
+<script src="js/jquery.js"></script> 
+
+<!-- Bootstrap Core JavaScript --> 
+<script src="js/bootstrap.min.js"></script>
+
+
 </body>
 </html>

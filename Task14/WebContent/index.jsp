@@ -34,12 +34,10 @@
     <![endif]-->
 
 <script type='text/javascript' src='external/js/jquery-2.1.4.js'></script>
-<script language="JavaScript">
-<!--
 
+<!-- Generate Notice JavaScript -->
+<script src="external/js/generate.js"></script>
 
-//-->
-</script>
 <script type='text/javascript'>//<![CDATA[ 
 $(window).load(function(){
 $(function(){
@@ -50,8 +48,8 @@ $(function(){
             $("#optoutno").removeAttr("disabled");
         }
         else if($("#no").is(":checked")){
-			$("#optoutyes, #optoutno").val("").attr("checked",false);
-            $("#optoutyes, #optoutno").val("").attr("disabled",true);  
+			$("#optoutyes, #optoutno").attr("checked",false);
+            $("#optoutyes, #optoutno").attr("disabled",true);  
         }
     });
 
@@ -63,8 +61,8 @@ $(function(){
             $("#optoutno3").removeAttr("disabled");
         }
         else if($("#no3").is(":checked")){
-			$("#optoutyes3, #optoutno3").val("").attr("checked",false);
-            $("#optoutyes3, #optoutno3").val("").attr("disabled",true);  
+			$("#optoutyes3, #optoutno3").attr("checked",false);
+            $("#optoutyes3, #optoutno3").attr("disabled",true);  
         }
     });
 
@@ -75,8 +73,8 @@ $(function(){
             $("#optoutno4").removeAttr("disabled");
         }
         else if($("#no4").is(":checked")){
-			$("#optoutyes4, #optoutno4").val("").attr("checked",false);
-            $("#optoutyes4, #optoutno4").val("").attr("disabled",true);  
+			$("#optoutyes4, #optoutno4").attr("checked",false);
+            $("#optoutyes4, #optoutno4").attr("disabled",true);  
         }
     });
 
@@ -87,8 +85,8 @@ $(function(){
             $("#optoutno5").removeAttr("disabled");
         }
         else if($("#no5").is(":checked")){
-			$("#optoutyes5").val("").attr("checked",true);
-            $("#optoutyes5").val("").attr("disabled",true);  
+			$("#optoutyes5").attr("checked",true);
+            $("#optoutyes5").attr("disabled",true);  
         }
     });
 
@@ -98,8 +96,8 @@ $(function(){
             $("#optoutyes6").removeAttr("disabled");
         }
         else if($("#no6, #na6").is(":checked")){
-			$("#optoutyes6").val("").attr("checked",true);
-            $("#optoutyes6, #optoutno6").val("").attr("disabled",true);  
+			$("#optoutyes6").attr("checked",true);
+            $("#optoutyes6, #optoutno6").attr("disabled",true);  
         }
     });
 	
@@ -109,8 +107,8 @@ $(function(){
             $("#optoutyes7").removeAttr("disabled");
         }
         else if($("#no7").is(":checked")){
-			$("#optoutyes7").val("").attr("checked",true);
-            $("#optoutyes7").val("").attr("disabled",true);  
+			$("#optoutyes7").attr("checked",true);
+            $("#optoutyes7").attr("disabled",true);  
         }
     });
 });
@@ -203,19 +201,6 @@ $("#hide").click(function() {
 </script>
 
 <!-- Confirm with Camilo -->
-<script type="text/javascript">
-// $(window).load(function(){
-// $('#preview').click(function () {
-//     var href = $("#demo").attr('class');
-//     var href = href.replace('disabled', 'D');
-//     $("#demo").attr('class', href);
-//     //reload iframe
-//     document.getElementById('notice').contentWindow.location.reload(true);
-//     alert("success");
-// });
-// });
-</script>
-
 
 </head>
 
@@ -510,7 +495,7 @@ $("#hide").click(function() {
 						<p></p>
 						<div class="col-sm-6 col-md-4">
 							<label>
-							<input checked disabled name="whatinfo" onclick="chkcontrol(0)" type="checkbox" value="	Social Security Number	"> 
+							<input checked disabled name="whatinfo"  type="checkbox" value="	Social Security Number	"> 
 							Social Security Number
 							<a title="Social Security Number is selected by default.">
 							<span class="glyphicon glyphicon-info-sign"></span>
@@ -1467,7 +1452,7 @@ Call direct line 888-123-8791" rows="2" /></textarea> </div>
 				<br><br></div>
 			
 		<div class="col-md-12 text-center">
-				<input id="preview" class="btn btn-xl" type="submit" value="Generate Notice" /><br>
+				<input id="preview" class="btn btn-xl" type="button" value="Generate Notice" /><br>
 				<br><br></div>
 			<div class="row">
 				<div class="col-sm-3">
@@ -1549,6 +1534,8 @@ Call direct line 888-123-8791" rows="2" /></textarea> </div>
 						<iframe id="notice" class="embed-responsive iframe" src="Output/notice.html">
 						<p>Your browser does not support iframes.</p>              						 						
 						</iframe></div>
+						<iframe id="optoutframe" style="display: none" src="Output/optout.html"></iframe>
+						<iframe id="plainframe" style="display: none" src="Output/noticePlain.html"></iframe>
 				</div>
 			</div>
 		</div>
@@ -1566,9 +1553,6 @@ Call direct line 888-123-8791" rows="2" /></textarea> </div>
 <script src="external/js/jqBootstrapValidation.js"></script>
 <!-- Custom Theme JavaScript -->
 <script src="external/js/agency.js"></script>
-
-<!-- Generate Notice JavaScript -->
-<script src="external/js/generate.js"></script>
 
 </body>
 

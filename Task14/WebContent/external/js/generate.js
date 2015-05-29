@@ -5,17 +5,15 @@
 
 $(document).ready(function() {
 		$("#preview").click(function(event) {
-			/* Confirm with Camilo */
-			/* var href = $("#demo").attr('class');
-     		var href = href.replace('disabled', 'D');
-     		$("#demo").attr('class', href);
-     		*/
-
+			//var href = $("#demo").attr('class');
+     		//var href = href.replace('disabled', 'D');
+     		//$("#demo").attr('class', href);
+     		
 
 			// institute name
 			var institute = $("input#institution-name").val();
 			console.log("institute = " + institute);
-			sessionStorage.setItem('institute', institute);
+			localStorage.setItem('institute', institute);
 
 			// whatinfo
 			// console.log("checked value = " + document.f1.whatinfo[i].value);
@@ -26,12 +24,12 @@ $(document).ready(function() {
 		       console.log("whatinfo = " + notrim);
 		       whatinfo.push($.trim(notrim));
 		     });
-		     sessionStorage["whatinfo"] = whatinfo.join(" and</li><li> ");
+		     localStorage["whatinfo"] = whatinfo.join(" and</li><li> ");
 
 		     // sharing2
 		     var sharing2 = $("input[name=sharing2]:checked").val();
 		     console.log("sharing2 = " + sharing2);
-		     sessionStorage.setItem('sharing2', sharing2);
+		     localStorage.setItem('sharing2', sharing2);
 
 		     // optout2
 		     var optout2 = "We don't share";
@@ -40,12 +38,12 @@ $(document).ready(function() {
 		     	optout2 = $("input[name=optout2]:checked").val();
 		     }
 		     console.log("optout2 = " + optout2);
-		     sessionStorage.setItem('optout2', optout2);
+		     localStorage.setItem('optout2', optout2);
 
 		     // sharing3
 		     var sharing3 = $("input[name=sharing3]:checked").val();
 		     console.log("sharing3 = " + sharing3);
-		     sessionStorage.setItem('sharing3', sharing3);
+		     localStorage.setItem('sharing3', sharing3);
 
 		     // optout3
 		     var optout3 = "We don't share";
@@ -54,12 +52,12 @@ $(document).ready(function() {
 		     	optout3 = $("input[name=optout3]:checked").val();
 		     }
 		     console.log("optout3 = " + optout3);
-		     sessionStorage.setItem('optout3', optout3);
+		     localStorage.setItem('optout3', optout3);
 
 		     // sharing4
 		     var sharing4 = $("input[name=sharing4]:checked").val();
 		     console.log("sharing4 = " + sharing4);
-		     sessionStorage.setItem('sharing4', sharing4);
+		     localStorage.setItem('sharing4', sharing4);
 
 		     // optout4
 		     var optout4 = "We don't share";
@@ -68,12 +66,12 @@ $(document).ready(function() {
 		     	optout4 = $("input[name=optout4]:checked").val();
 		     }
 		     console.log("optout4 = " + optout4);
-		     sessionStorage.setItem('optout4', optout4);
+		     localStorage.setItem('optout4', optout4);
 
 		     // sharing5
 		     var sharing5 = $("input[name=sharing5]:checked").val();
 		     console.log("sharing5 = " + sharing5);
-		     sessionStorage.setItem('sharing5', sharing5);
+		     localStorage.setItem('sharing5', sharing5);
 
 		     // optout5
 		     var optout5 = "We don't share";
@@ -82,12 +80,12 @@ $(document).ready(function() {
 		     	optout5 = $("input[name=optout5]:checked").val();
 		     }
 		     console.log("optout5 = " + optout5);
-		     sessionStorage.setItem('optout5', optout5);
+		     localStorage.setItem('optout5', optout5);
 
 		     // sharing6
 		     var sharing6 = $("input[name=sharing6]:checked").val();
 		     console.log("sharing6 = " + sharing6);
-		     sessionStorage.setItem('sharing6', sharing6);
+		     localStorage.setItem('sharing6', sharing6);
 
 		     // optout6
 		     var optout6 = "We don't share";
@@ -96,12 +94,12 @@ $(document).ready(function() {
 		     	optout6 = $("input[name=optout6]:checked").val();
 		     }
 		     console.log("optout6 = " + optout6);
-		     sessionStorage.setItem('optout6', optout6);
+		     localStorage.setItem('optout6', optout6);
 
 		     // sharing7
 		     var sharing7 = $("input[name=sharing7]:checked").val();
 		     console.log("sharing7 = " + sharing7);
-		     sessionStorage.setItem('sharing7', sharing7);
+		     localStorage.setItem('sharing7', sharing7);
 
 		     // optout7
 		     var optout7 = "We don't share";
@@ -110,17 +108,17 @@ $(document).ready(function() {
 		     	optout7 = $("input[name=optout7]:checked").val();
 		     }
 		     console.log("optout7 = " + optout7);
-		     sessionStorage.setItem('optout7', optout7);
+		     localStorage.setItem('optout7', optout7);
 
 		     // phone
 		     var phone = $("input#phone").val();
 			 console.log("phone = " + phone);
-			 sessionStorage.setItem('phone', phone);
+			 localStorage.setItem('phone', phone);
 
 			 // site/web
 			 var web = $("input#web").val();
 			 console.log("web = " + web);
-			 sessionStorage.setItem('web', web);
+			 localStorage.setItem('web', web);
 
 			 // limit sharing [Other Methods]
 			 var othermethods = "";
@@ -128,7 +126,7 @@ $(document).ready(function() {
 			 	othermethods = $("textarea#limitstext2").val();
 			 }
 			 console.log("othermethods = " + othermethods);
-			 sessionStorage.setItem('othermethods', othermethods);
+			 localStorage.setItem('othermethods', othermethods);
 
 			 // how to limit direct marketing contacts
 			 var direct_contact = "";
@@ -136,18 +134,18 @@ $(document).ready(function() {
 			 	direct_contact = $("textarea#limitstext").val();
 			 }
 			 console.log("direct_contact = " + direct_contact);
-			 sessionStorage.setItem('direct_contact', direct_contact);
+			 localStorage.setItem('direct_contact', direct_contact);
 
 			 // email
 			 var email = $("input#email").val();
 			 console.log("email = " + email);
-			 sessionStorage.setItem('email', email);
+			 localStorage.setItem('email', email);
 
 			 // address
 			 var address = $("textarea#mailadd").val() + ", " + $("input#l3").val()
 			 + ", " + $("input#zip").val() + ", " + $( "#stateselect option:selected" ).text();
 			 console.log("address = " + address);
-			 sessionStorage.setItem('address', address);
+			 localStorage.setItem('address', address);
 
 			 // legal entity name
 			 var legalname = $("input#legalname").val();
@@ -156,12 +154,12 @@ $(document).ready(function() {
 			 }
 			 
 			 console.log("legalname = " + legalname);
-			 sessionStorage.setItem('legalname', legalname);
+			 localStorage.setItem('legalname', legalname);
 
 			 // measures
 			 var measures = $("textarea#measures").val();
 			 console.log("measures = " + measures);
-			 sessionStorage.setItem('measures', measures);
+			 localStorage.setItem('measures', measures);
 
 			 // how
 		     var how = [];
@@ -170,7 +168,7 @@ $(document).ready(function() {
 		       console.log("howtrim = " + howtrim);
 		       how.push(howtrim);
 		     });
-		     sessionStorage["how"] = how.join("</li><li>");
+		     localStorage["how"] = how.join("</li><li>");
 
 
 		     // affiliate
@@ -188,7 +186,7 @@ $(document).ready(function() {
 		     }
 
 		     console.log("affiliate = " + affiliate);
-		     sessionStorage.setItem('affiliate', affiliate);
+		     localStorage.setItem('affiliate', affiliate);
 
 		     // naffiliate
 		     var naffiliate = $("input[name=naffiliate]:checked").val();
@@ -203,7 +201,7 @@ $(document).ready(function() {
 		     }
 
 		     console.log("naffiliate = " + naffiliate);
-		     sessionStorage.setItem('naffiliate', naffiliate);
+		     localStorage.setItem('naffiliate', naffiliate);
 
 		     // nonaffiliates
 		     var nonaffiliates = $("input[name=nonaffiliates]:checked").val();
@@ -217,23 +215,23 @@ $(document).ready(function() {
 		     	break;
 		     }
 		     console.log("nonaffiliates = " + nonaffiliates);
-		     sessionStorage.setItem('nonaffiliates', nonaffiliates);
+		     localStorage.setItem('nonaffiliates', nonaffiliates);
 
 		     // receipt
 		     var receipt = $("input#receipt").val();
 			 console.log("receipt = " + receipt);
-			 sessionStorage.setItem('receipt', receipt);
+			 localStorage.setItem('receipt', receipt);
 
 			 // business
 			 var business = $("input[name=joint]:checked").val();
 			 console.log("business = " + business);
-			 sessionStorage.setItem('business', business);
+			 localStorage.setItem('business', business);
 
 			 // states and laws
 			 if ($("textarea#states").val().trim().length > 0) {
 			 	var states = $("textarea#states").val().trim();
 			 	console.log("states = " + states);
-			 	sessionStorage.setItem('states', states);
+			 	localStorage.setItem('states', states);
 
 			 }
 
@@ -250,7 +248,7 @@ $(document).ready(function() {
 
 			 }
 			 console.log("apply = " + apply);
-			 sessionStorage.setItem('apply', apply);
+			 localStorage.setItem('apply', apply);
 
 			 // collection
 			 var collection = $("input[name=collection]:checked").val();
@@ -266,18 +264,22 @@ $(document).ready(function() {
 		     }
 
 		     console.log("collection = " + collection);
-		     sessionStorage.setItem('collection', collection);
+		     localStorage.setItem('collection', collection);
 
 		     // expireday
 		     var expireday = $("input#days").val();
 		     console.log("expireday = " + expireday);
-		     sessionStorage.setItem('expireday', expireday);
+		     localStorage.setItem('expireday', expireday);
 
 
-			$("#notice")[0].contentWindow.location.reload(true);
-			window.open("Output/notice.html");
-			window.open("Output/optout.html");
-
+		     var href = $("#demo").attr('class');
+		     var href = href.replace('disabled', 'D');
+		     $("#demo").attr('class', href);
+		     
+			 $("#notice")[0].contentWindow.location.reload(true);
+			 $("#optoutframe")[0].contentWindow.location.reload(true);
+			 $("#plainframe")[0].contentWindow.location.reload(true);
+			 
 			 event.preventDefault();
 			 return false;
 			

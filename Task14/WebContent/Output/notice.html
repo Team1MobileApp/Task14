@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Uniform Privacy Policy for Financial Institutions implemented by FTC">
 	<meta name="author" content="FTC">
-	<title>[Institution] | U.S. Consumer Privacy Notice</title>
+	<title></title>
 
 	<!-- Bootstrap Core CSS -->
 
@@ -23,6 +23,7 @@
 
     <![endif]-->
 	<script src="js/jquery.min.js"></script>
+  <script src="js/fill.js"></script>
 	<style type="text/css">
 .good {
 	background-color: #33ff33;
@@ -43,7 +44,8 @@
 			var scale = [
 				['poor', "Yes,No"],
 				['avg', "Yes,Yes"],
-				['good', "No"], ];
+				['good', "No,We don't share"], 
+        ['good', "N/A,We don't share"]];
 			var score = $(this).text();
 			for (var i = 0; i < scale.length; i++) {
 				if (score == scale[i][1]) {
@@ -64,14 +66,15 @@
 <div class="row">
       <div class="col-xs-12">
     <h1>U.S. CONSUMER PRIVACY NOTICE</h1>
-    <h2>[Institution Name]</h2>
+    <h2 id="institute-name"></h2>
   </div>
     </div>
 <div class="row">
       <div class="col-sm-12">
     <hr>
     <br>
-    <font color="red">Rev. [month/2015]</font> <br>
+    <font color="red"><p id="rev_date"> </p></font>
+    <br>
   </div>
     </div>
 <div class="row">
@@ -119,21 +122,16 @@ We aim to provide you a clear and understandable explanation of how we use your 
           </thead>
               <tbody>
             <tr>
-                  <th align="left" bgcolor="#CCCCCC">[Institution] Rating</th>
+                  <th align="left" bgcolor="#CCCCCC" id="rating"></th>
                   <td align="center" bgcolor="#EFEFEF">Essencial for Business</td>
-                  <td align="center">Yes,No</td>
-                  <td align="center">Yes,No</td>
-                  <td align="center">Yes,Yes</td>
-                  <td align="center">Yes,Yes</td>
-                  <td align="center">No</td>
+                  <td align="center" id="rating2"></td>
+                  <td align="center" id="rating3"></td>
+                  <td align="center" id="rating4"></td>
+                  <td align="center" id="rating6"></td>
+                  <td align="center" id="rating7"></td>
                 </tr>
           </tbody>
             </table></p>
-              <div class="progress">
-    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-      70/100 points possible
-    </div>
-  </div>
             
         <!-- End Facts Label --> 
       </div>
@@ -143,7 +141,7 @@ We aim to provide you a clear and understandable explanation of how we use your 
 <div class="row">
       <hr>
       <h2>FACTS</h2>
-      <h3>What does [Institution] do with your Personal Information?</h3>
+      <h3 id="whatdoque"></h3>
       <br>
       <div class="col-md-4">
     <button type="button" class="btn btn-default btn-block" data-toggle="collapse" data-target="#why"> <span class="glyphicon glyphicon-chevron-down"></span> <b>WHY</b> </button>
@@ -156,17 +154,15 @@ We aim to provide you a clear and understandable explanation of how we use your 
     <button type="button" class="btn btn-default btn-block" data-toggle="collapse" data-target="#what"> <span class="glyphicon glyphicon-chevron-down"></span> <b>WHAT</b> </button>
     <div id="what" class="collapse in"> The types of information that we collect and share depends on the products or services you have with us. This information can include: <br>
           <br>
-          <ul>
-        <li> Social Security Number and [Field Information Option 2]</li>
-        <li> [Field Information Option 3] and [Field Information Option 4]</li>
-        <li> [Field Information Option 5]</li>
-      </ul>
+          <ul id="whatinfocheck">
+        
+        </ul>
         </div>
     <br>
   </div>
       <div class="col-md-4">
     <button type="button" class="btn btn-default btn-block" data-toggle="collapse" data-target="#how"> <span class="glyphicon glyphicon-chevron-down"></span> <b>HOW</b> </button>
-    <div id="how" class="collapse in">All financial companies need to share customers personal information to run their everyday business. In the next section, we list the reasons  why  financial companies can share their customers personal information; the reasons [institution] chooses to share; and whether you can limit this sharing.</div>
+    <div id="how" class="collapse in"></div>
     <!-- /.row --> 
   </div>
       <br>
@@ -179,7 +175,7 @@ We aim to provide you a clear and understandable explanation of how we use your 
           <thead>
         <tr class="danger">
               <th width="54%">Reasons we can share personal information</th>
-              <th width="23%">Does [institution] Share?</th>
+              <th id="shareque" width="23%"></th>
               <th width="23%">Can you limit this sharing?</th>
           </thead>
           <tbody>
@@ -192,51 +188,45 @@ We aim to provide you a clear and understandable explanation of how we use your 
         <tr>
               <td><b>For our marketing purposes:</b> <br>
             To offer you other products and services from our company. </td>
-              <td> [Field reason2]</td>
-              <td> [If sharing=no, this says "We dont share"] <br>
-            </td>
+              <td id="sharing2"></td>
+              <td id="optout2"></td>
             </tr>
         <tr>
               <td><b>For joint marketing with other financial companies:</b> <br>
             To present you products and services that we offer in partnership with other financial companies. </td>
-              <td> [Field reason3]</td>
-              <td> [If sharing=no, this says "We dont share"] <br>
-           </td>
+              <td id="sharing3"></td>
+              <td id="optout3"></td>
             </tr>
         <tr>
               <td><b>For our affiliates' everyday business purposes:</b> <br>
             Information about your transactions and experiences. </td>
-              <td> [Field reason4]</td>
-              <td> [If sharing=no, this says "We dont share"] <br>
-           </td>
+              <td id="sharing4"></td>
+              <td id="optout4"></td>
             </tr>
         <tr>
               <td><b>For our affiliates' everyday business purposes:</b> <br>
             Information about your information about your creditworthiness. </td>
-              <td> [Field reason5]</td>
-              <td> [If sharing=no, this says "We dont share"] <br>
-            </td>
+              <td id="sharing5"></td>
+              <td id="optout5"></td>
             </tr>
             <!--This row only shows if answered YES on sharing6 field of index form-->
                     <tr>
               <td><b>For our affiliates to market to you.</b> <br>
              </td>
-              <td> Yes </td>
-              <td> Yes <br>
-            </td>
+              <td id="sharing6"></td>
+              <td id="optout6"></td>
             </tr>
              <!--This row only shows if answered YES on sharing6 field of index form-->                       
         <tr>
               <td><b>For non-affiliates to market to you.</b> <br>
             </td>
-              <td> [Field reason7]</td>
-              <td> [If sharing=no, this says "We dont share"] <br>
-           </td>
+              <td id="sharing7"></td>
+              <td id="optout7"></td>
             </tr>
       </tbody>
         </table>
         
-     <button type="button" onclick="optout()" class="btn btn-info">Submit your sharing preferences</button>   
+     <button type="button" id="send_sharing" onclick="optout()" class="btn btn-info">Send your sharing preferences</button>   
 </p>
     <!-- /.col-md-10 --> 
   </div>
@@ -255,24 +245,22 @@ We aim to provide you a clear and understandable explanation of how we use your 
     <div id="limit" class="collapse">
           <ul>
         <li><a onclick="optout()">Submit your sharing preferences</a></li>
-        <li>Call toll free [phone] - Our menu will promt you through your choices, or</li>
-        <li>Visit us online:<a href="[site]">[site]</a></li>
+        <li id="sharephone"></li>
+        <li>Visit us online: <a href="" id="shareweb"></a></li>
         <!-- If selected, offer mail in form -->
-        <li>Mail in a <a href="mailin.pdf">form</a>.</li>
-        <li>[Other Methods]</li>
+        <li>Mail in a <a id="send_link" href="mailin.pdf">form</a>.</li>
+        <li id="othermethods"></li>
       </ul>
           <br>
           Please Note:<br>
-          If you are a new customer, we can begin sharing your information [>=30] days from the date we sent this notice. When you are no longer our customer, we continue to share your information as described in this notice. However, you can contact us at any time to limit our sharing. </div>
+          If you are a new customer, we can begin sharing your information <p id="expireday" style="display: inline"></p> days from the date we sent this notice. When you are no longer our customer, we continue to share your information as described in this notice. However, you can contact us at any time to limit our sharing. </div>
     <br>
     
     <!--ONLY IF VALUE OF DIRECT MARKETING LIMIT IS NOT BLANK -->
     <button type="button" class="btn btn-default btn-block" data-toggle="collapse" data-target="#marketinglimit"> <span class="glyphicon glyphicon-chevron-down"></span> <b>How to limit our direct marketing contact</b> </button>
     <div id="marketinglimit" class="collapse">
           <ul>
-        <li>[Method 1]</li>
-        <li>[Method 2]</li>
-        <li>[Method 3]</li>
+        <li id="direct_contact"></li>
       </ul>
         </div>
     <br>
@@ -281,9 +269,9 @@ We aim to provide you a clear and understandable explanation of how we use your 
     <button type="button" class="btn btn-default btn-block" data-toggle="collapse" data-target="#question"> <span class="glyphicon glyphicon-chevron-down"></span> <b>Questions</b> </button>
     <div id="question" class="collapse">
           <ul>
-        <li>Call us Toll Free [phone] or visit us online at [website]</li>
-        <li>Email: [email]</li>
-        <li>Mailing Address: [address]</li>
+        <li>Call us Toll Free <p id="otherphone" style="display: inline"></p> or visit us online at <a href="" id="otherweb" style="display: inline"></a></li>
+        <li id="email"></li>
+        <li id="mailladd">Mailing Address: </li>
       </ul>
         </div>
     
@@ -303,7 +291,7 @@ We aim to provide you a clear and understandable explanation of how we use your 
     <table class="table table-hover">
           <tr>
         <td class="danger" width="35%"><b>Who is providing this notice?</b></td>
-        <td width="75%"> This notice reflects the policy of: [Legal Entity Name] + [, other if applicable]</td>
+        <td width="75%" id="legalname"> This notice reflects the policy of </td>
       </tr>
         </table>
   </div>
@@ -323,25 +311,21 @@ We aim to provide you a clear and understandable explanation of how we use your 
     <h3>What we do</h3>
     <table class="table table-hover">
           <tr>
-        <td class="danger" width="35%"><b> How does [company alias] protect your personal information? </b></td>
+        <td class="danger" width="35%" id="protectQue"><b> </b></td>
         <td width="75%"> To protect your personal information from unauthorized access and use we use security measures that comply with federal law. These measures include:
-              <ul>
+              <ul id="measures">
             <li>Computer safeguards</li>
             <li>Secured files and buildings</li>
-            <li>[Up to 30 words]</li>
+           
           </ul></td>
       </tr>
           <tr>
-        <td class="danger"><b> How does [company alias] collect your personal information? </b></td>
+        <td class="danger" id="collectQue"><b></b></td>
         <td> We collect your information, for example, when you:
-              <ul>
-            <li>[Option1]</li>
-            <li>[Option2]</li>
-            <li>[Option3]</li>
+              <ul id="howColl">
           </ul>
               <ul>
-            <li> [Option 1/3] 
-                  We also collect your personal information from other companies.</li>
+            <li id="collection"></li>
           </ul></td>
       </tr>
           <tr>
@@ -352,14 +336,12 @@ We aim to provide you a clear and understandable explanation of how we use your 
             <li>Affiliates from using your information to market to you</li>
             <li>Nonaffiliates to market to you</li>
           </ul>
-              [If Institution Describes State Laws in OTHER Section] 
-              State laws and individual companies may give you additional rights to limit sharing. See <a href="#Other">Other Important Information</a> for more on your rights under state law. </td>
+          <p id="referother"></p>
+        </td>
       </tr>
           <tr>
         <td class="danger"><b> What happens when I limit sharing for an account I hold jointly with someone else? </b></td>
-        <td> [If Institution provides opt-out option]
-              Your choices will apply only to your [account/policy], unless you <a onclick="optout()">tell us otherwise</a>. - 
-              Your choices will apply to everyone on the [account/policy], unless you <a onclick="optout()">tell us otherwise</a>. - Sharing may not be limited. </td>
+        <td id="accountorpolicy"></td>
       </tr>
         </table>
   </div>
@@ -383,7 +365,7 @@ We aim to provide you a clear and understandable explanation of how we use your 
     <div id="Affiliates" class="collapse"> Companies related by common ownership or control. They can be financial and nonfinancial companies:<br>
           <br>
           <ul>
-        <li><i>[Options 1/3]Our affiliates include financial companies that utilize the names of [institution], [+ Other Alias]. [+ Nonfinancial companies such as [illustrative list of nonfinancial companies] </i></li>
+        <li id="affiliate"></li>
       </ul>
           <br>
         </div>
@@ -394,7 +376,7 @@ We aim to provide you a clear and understandable explanation of how we use your 
     <div id="Nonaffiliates" class="collapse"> Companies not related by common ownership or control. They can be Financial and nonfinancial companies.<br>
           <br>
           <ul>
-        <li><i>[Options 1/2]Nonaffiliates we share with can include companies such as: [list]. </i></li>
+        <li id="naffiliate"></li>
       </ul>
           <br>
         </div>
@@ -405,7 +387,7 @@ We aim to provide you a clear and understandable explanation of how we use your 
     <div id="joint" class="collapse"> A formal agreement between nonaffiliated financial companies that together market financial products or services to you.<br>
           <br>
           <ul>
-        <li><i>[Option 1/2]Our joint marketing partners include: [list]</i></li>
+        <li id="nonaffiliatesjoin"></li>
       </ul>
           <br>
         </div>
@@ -425,17 +407,9 @@ We aim to provide you a clear and understandable explanation of how we use your 
     <div id="extra" class="collapse">
           <table>
         <tr>
-              <td><b>[Input2 Title]</b></td>
-            </tr>
-        <tr>
-              <td> [Intput text]</td>
-            </tr>
-        <tr>
-              <td><b>[Input2 Title]</b></td>
-            </tr>
-        <tr>
-              <td> [Intput text]</td>
-            </tr>
+            <td id="stateslaw"><b></b></td>
+        </tr>
+        
       </table>
           <br>
           <br>
@@ -444,7 +418,7 @@ We aim to provide you a clear and understandable explanation of how we use your 
     <br>
     <!-- If selected aknowledgement receipt form --> 
     <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#extra2"> <span class="glyphicon glyphicon-chevron-down"></span> <b>Acknowledgement of Receipt Form</b> </button>
-    <div id="extra2" class="collapse">Access an <a href="[link]" target="new">aknowledgement receipt form</a>. </div>
+    <div id="extra2" class="collapse">Access an <a href="" target="new" id="receiptlink">aknowledgement receipt form</a>. </div>
     <br>
     <!-- /.Accordions5 --> 
   </div>
@@ -456,7 +430,7 @@ We aim to provide you a clear and understandable explanation of how we use your 
       <div class="row">
     <div class="col-lg-12">
           <hr>
-          <p align="center">Copyright &copy; [Institution] 2015</p>
+          <p align="center" id="footerp">Copyright &copy; </p>
         </div>
   </div>
     </footer>
@@ -479,5 +453,6 @@ function optout() {
 
 <!-- Bootstrap Core JavaScript --> 
 <script src="js/bootstrap.min.js"></script>
+
 </body>
 </html>
