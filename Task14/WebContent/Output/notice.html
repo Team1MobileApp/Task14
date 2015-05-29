@@ -424,6 +424,18 @@ We aim to provide you a clear and understandable explanation of how we use your 
   </div>
       <!-- /.row --> 
     </div>
+    <hr>
+      <div class="row">
+      <div class="col-md-4 text-center">&nbsp;</div>
+      <div id='downloadplain' class="col-md-4 text-center">
+        <h4>DOWNLOAD PLAIN NOTICE</h4>
+        This option downloads a plain HTML version of the Notice without any formatting. It is recommended if you want to embed the notice in your institution's website with your own formatting. <br><br>
+        <button class="btn btn-lg" onclick="downloadHTML('noticePlain.html')">Download Plain Web Page
+        </button><br><br></div>
+        <div class="col-md-4 text-center">&nbsp;</div>
+    </div>
+
+
 
 <!-- Footer -->
 <footer>
@@ -446,6 +458,23 @@ $(document).ready(function(){
 function optout() {
     window.open("optout.html", "_blank", "toolbar=no, menubar=no, location=no, titlebar=no, scrollbars=no, resizable=yes, top=45, left=150, width=580, height=755");
 }
+</script>
+
+<script>
+            function downloadHTML(fileName) {
+                var aLink = document.createElement('a');
+                
+                d = document.getElementById('downloadplain');
+                var backup = d.outerHTML;
+                d.outerHTML = "";
+                var blob = new Blob([ document.documentElement.outerHTML ]);
+                var evt = document.createEvent("HTMLEvents");
+                evt.initEvent("click", false, false);
+                aLink.download = fileName;
+                aLink.href = URL.createObjectURL(blob);
+                aLink.dispatchEvent(evt);
+                window.location.reload(true);
+            }
 </script> 
 
 <!-- jQuery --> 
