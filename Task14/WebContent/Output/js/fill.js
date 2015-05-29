@@ -277,9 +277,17 @@ $(document).ready(function() {
     if(localStorage.getItem('expireday')) {
     	var expireday = localStorage.getItem('expireday');
     	$("p#expireday").text(expireday);
-
     }
-
+    
+    // mailin
+    if (localStorage.getItem('mailin')) {
+    	var mailin = localStorage.getItem('mailin');
+    	console.log("mailin = " + mailin);
+	    	if (mailin == "Yes") {
+	    		console.log("mailin YES!");
+	    		$("<li>Mail in a <a id=\"send_link\" href=\"mailin.html\">form</a>.</li>").insertAfter("li#visitus");
+	    	}
+    }
 });
 
 

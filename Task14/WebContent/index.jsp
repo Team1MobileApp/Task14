@@ -923,7 +923,7 @@ $("#hide").click(function() {
 							<td>
 							<div class="form-group">
 								<label class="radio-inline">
-								<input id="optoutyes7" checked disabled name="optout7" type="radio" /> 
+								<input id="optoutyes7" checked disabled name="optout7" type="radio" value="Yes" /> 
 								Yes </label></div>
 							</td>
 						</tr>

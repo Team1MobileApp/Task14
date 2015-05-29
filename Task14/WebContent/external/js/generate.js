@@ -5,10 +5,6 @@
 
 $(document).ready(function() {
 		$("#preview").click(function(event) {
-			//var href = $("#demo").attr('class');
-     		//var href = href.replace('disabled', 'D');
-     		//$("#demo").attr('class', href);
-     		
 
 			// institute name
 			var institute = $("input#institution-name").val();
@@ -24,8 +20,15 @@ $(document).ready(function() {
 		       console.log("whatinfo = " + notrim);
 		       whatinfo.push($.trim(notrim));
 		     });
-		     localStorage["whatinfo"] = whatinfo.join(" and</li><li> ");
-
+		     if (whatinfo.length > 6) {
+		    	 	localStorage["whatinfo"] = whatinfo[0] + "</li><li>" + whatinfo[1] + "</li><li>" +
+			     whatinfo[2] + "</li><li>" +  whatinfo[3] + "</li><li>" + whatinfo[4]  + "</li><li>" + whatinfo[5];
+		  
+		     } else {
+		    	 	localStorage["whatinfo"] = whatinfo.join("</li><li>");
+		     }
+		     
+		     
 		     // sharing2
 		     var sharing2 = $("input[name=sharing2]:checked").val();
 		     console.log("sharing2 = " + sharing2);
@@ -168,9 +171,14 @@ $(document).ready(function() {
 		       console.log("howtrim = " + howtrim);
 		       how.push(howtrim);
 		     });
-		     localStorage["how"] = how.join("</li><li>");
-
-
+		    
+		     if (how.length > 5) {
+		    	 	localStorage["how"] = how[0] + "</li><li>" + how[1] + "</li><li>" +
+			     how[2] + "</li><li>" +  how[3] + "</li><li>" + how[4];
+		     } else {
+		    	 	localStorage["how"] = how.join("</li><li>");
+		     }
+		     
 		     // affiliate
 		     var affiliate = $("input[name=affiliate]:checked").val();
 		     switch(affiliate) {
@@ -270,7 +278,11 @@ $(document).ready(function() {
 		     var expireday = $("input#days").val();
 		     console.log("expireday = " + expireday);
 		     localStorage.setItem('expireday', expireday);
-
+		     
+		     // mailin
+		      var mailin = $("input[name=mailin]:checked").val();
+		      console.log("mailin = " + mailin);
+		      localStorage.setItem('mailin', mailin);
 
 		     var href = $("#demo").attr('class');
 		     var href = href.replace('disabled', 'D');
