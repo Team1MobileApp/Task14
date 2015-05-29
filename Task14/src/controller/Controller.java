@@ -32,7 +32,7 @@ public class Controller extends HttpServlet {
         Action.add(new WelcomeAction(model));
         Action.add(new ChooseAction(model));
         Action.add(new DownloadAction(model));
-//        Action.add(new DownloadPlainHtml(model));
+        Action.add(new DownloadPlainHtml(model));
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

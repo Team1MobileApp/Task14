@@ -49,7 +49,14 @@ public class Information {
 	private String whatinfo2;
 	private String whatinfo3;
 	private String whatinfo4;
+	private String whatinfo5;
 	
+	public String getWhatinfo5() {
+		return whatinfo5;
+	}
+	public void setWhatinfo5(String whatinfo5) {
+		this.whatinfo5 = whatinfo5;
+	}
 	private String how1;
 	private String how2;
 	private String how3;
@@ -332,7 +339,7 @@ public class Information {
 			String affiliate, String naffiliate, String nonaffiliates,
 			String mailin, String others, String others2, String choice,
 			String others3, String others7, String whatinfo1, String whatinfo2,
-			String whatinfo3, String whatinfo4, String how1, String how2,
+			String whatinfo3, String whatinfo4, String whatinfo5, String how1, String how2,
 			String how3, String how4, String how5) {
 		
 		this.company = company;
@@ -374,6 +381,7 @@ public class Information {
 		this.whatinfo2 = whatinfo2;
 		this.whatinfo3 = whatinfo3;
 		this.whatinfo4 = whatinfo4;
+		this.whatinfo5 = whatinfo5;
 		this.how1 = how1;
 		this.how2 = how2;
 		this.how3 = how3;

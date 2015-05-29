@@ -170,6 +170,7 @@ public class InputXMLAction extends Action {
 		list.add("whatinfo2");
 		list.add("whatinfo3");
 		list.add("whatinfo4");
+		list.add("whatinfo5");
 		
 		list.add("how1");
 		list.add("how2");
@@ -243,7 +244,8 @@ public class InputXMLAction extends Action {
 					res.get(40),
 					res.get(41),
 					res.get(42),
-					res.get(43));
+					res.get(43),
+					res.get(44));
 			return info;
 		} catch (Exception e) {
 			e.printStackTrace();

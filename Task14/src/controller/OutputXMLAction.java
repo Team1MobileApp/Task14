@@ -190,6 +190,7 @@ public class OutputXMLAction extends Action {
 			list.add("whatinfo2");
 			list.add("whatinfo3");
 			list.add("whatinfo4");
+			list.add("whatinfo5");
 			
 			list.add("how1");
 			list.add("how2");

@@ -115,15 +115,21 @@ public class ChooseAction extends Action {
 					info.add("");
 					info.add("");
 					info.add("");
-				} else if (form.getWhatinfo().length < 4) {
+					info.add("");
+				} else if (form.getWhatinfo().length < 5) {
 					int length = form.getWhatinfo().length;
 					for (int i = 0; i < length; i++) {
-						
+						info.add(form.getWhatinfo()[i]);
 					}
+					for (int i = 0; i < 5 - length; i++) {
+						info.add("");
+					}
+				} else {
 					info.add(form.getWhatinfo()[0]);
 					info.add(form.getWhatinfo()[1]);
 					info.add(form.getWhatinfo()[2]);
 					info.add(form.getWhatinfo()[3]);
+					info.add(form.getWhatinfo()[4]);
 				}
 				
 				if (form.getHow() == null) {
@@ -132,6 +138,14 @@ public class ChooseAction extends Action {
 					info.add("");
 					info.add("");
 					info.add("");
+				} else if (form.getHow().length < 4) {
+					int length = form.getHow().length;
+					for (int i = 0; i < length; i++) {
+						info.add(form.getHow()[i]);
+					}
+					for (int i = 0; i < 4 - length; i++) {
+						info.add("");
+					}
 				} else {
 					info.add(form.getHow()[0]);
 					info.add(form.getHow()[1]);
